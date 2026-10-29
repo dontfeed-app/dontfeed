@@ -1,4 +1,4 @@
-/* Don’t Feed - arrière-plan : menus clic droit, abonnements, blocage de domaines, badge. */
+/* Don't Feed - arrière-plan : menus clic droit, abonnements, blocage de domaines, badge. */
 if (typeof importScripts === 'function') importScripts('lib/core.js', 'lib/i18n.js');
 const { DEFAULTS, EMPTY_PERSONAL, parseList, collect, cleanDomain } = globalThis.FRB;
 

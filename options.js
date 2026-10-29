@@ -226,7 +226,7 @@
   }
 
   $('exportBtn').onclick = () => {
-    const data = { title: 'Don’t Feed', updated: new Date().toISOString().slice(0, 10), entries: state.personal.entries.map(({ enabled, ...e }) => e), domains: state.personal.domains };
+    const data = { title: 'Don\'t Feed', updated: new Date().toISOString().slice(0, 10), entries: state.personal.entries.map(({ enabled, ...e }) => e), domains: state.personal.domains };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
     const a = el('a', { href: url, download: 'dontfeed-liste.json' });
     document.body.append(a); a.click(); a.remove();

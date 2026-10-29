@@ -1,4 +1,4 @@
-/* Don’t Feed - YouTube, contexte de la page.
+/* Don't Feed - YouTube, contexte de la page.
    Les vignettes Shorts n'affichent pas leur chaîne : elle n'existe que dans les données JSON
    que YouTube charge (ytInitialData puis les réponses /youtubei/). Ce script relève, pour chaque
    vidéo, l'identifiant de sa chaîne (UC...) et le pose en attribut data-frb-ch sur ses liens.

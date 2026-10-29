@@ -1,4 +1,4 @@
-/* Don’t Feed - content script : repère et masque les blocs qui citent un nom ou un site bloqué. */
+/* Don't Feed - content script : repère et masque les blocs qui citent un nom ou un site bloqué. */
 (() => {
   'use strict';
   // Déjà actif dans cet onglet (injection manuelle + automatique) : ne pas tourner deux fois
