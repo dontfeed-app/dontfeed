@@ -1,0 +1,305 @@
+{
+  "title": "Liste de départ FR (personnalités et partis)",
+  "description": "Liste de test : dirigeants, élus et partis français classés à l'extrême droite par une source publique (circulaire de l'Intérieur du 2 février 2026 pour le RN et l'UDR, presse pour Reconquête). Appartenance au parti et comptes officiels relevés sur Wikidata le 2026-10-28. Pas de particuliers.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Rassemblement national",
+      "aliases": [
+        "@RNational_off"
+      ],
+      "accounts": [
+        "https://x.com/RNational_off",
+        "https://www.instagram.com/rassemblementnational_fr/",
+        "https://www.facebook.com/RassemblementNational",
+        "https://www.tiktok.com/@rnational_off",
+        "https://www.youtube.com/channel/UCeWMp4Frgyv275gSnWNYoZQ",
+        "https://bsky.app/profile/rnationalofficiel.bsky.social"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "note": "Classé dans le bloc « extrême droite » par la circulaire de l'Intérieur du 2 février 2026 (nuances électorales), recours rejetés par le Conseil d'État le 27 février 2026 (n° 512694).",
+      "wikidata": "Q205150"
+    },
+    {
+      "name": "Jordan Bardella",
+      "aliases": [
+        "Bardella",
+        "@J_Bardella"
+      ],
+      "accounts": [
+        "https://x.com/J_Bardella",
+        "https://www.instagram.com/jordanbardella/",
+        "https://www.facebook.com/JordanBardella",
+        "https://www.tiktok.com/@jordanbardella",
+        "https://www.youtube.com/channel/UC3U0VIDgANFaXeOAtt1m5Mw",
+        "https://bsky.app/profile/jordanbardella.bsky.social"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "note": "Président du Rassemblement national.",
+      "wikidata": "Q40655898"
+    },
+    {
+      "name": "Marine Le Pen",
+      "aliases": [
+        "@MLP_officiel"
+      ],
+      "accounts": [
+        "https://x.com/MLP_officiel",
+        "https://www.instagram.com/marine_lepen/",
+        "https://www.facebook.com/MarineLePen",
+        "https://www.tiktok.com/@mlp.officiel",
+        "https://www.youtube.com/channel/UCU3z3px1_RCqYBwrs8LJVWg"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "note": "Figure du Rassemblement national.",
+      "wikidata": "Q12927"
+    },
+    {
+      "name": "Éric Ciotti",
+      "aliases": [
+        "Ciotti",
+        "@ECiotti"
+      ],
+      "accounts": [
+        "https://x.com/ECiotti",
+        "https://www.instagram.com/eciotti/",
+        "https://www.facebook.com/ECIOTTI",
+        "https://www.tiktok.com/@eciotti",
+        "https://www.youtube.com/channel/UCyHieXWJ4oewUR3ZTHdyzDw",
+        "https://bsky.app/profile/ericciotti.bsky.social"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "note": "Président de l'UDR, classée dans le bloc « extrême droite » par la même circulaire ; recours de l'UDR rejeté par le Conseil d'État.",
+      "wikidata": "Q1844180"
+    },
+    {
+      "name": "Éric Zemmour",
+      "aliases": [
+        "Zemmour",
+        "@ZemmourEric"
+      ],
+      "accounts": [
+        "https://x.com/ZemmourEric",
+        "https://www.instagram.com/ericzemmour_/",
+        "https://www.facebook.com/ZemmourEric",
+        "https://www.tiktok.com/@zemmour_eric",
+        "https://www.youtube.com/channel/UCjTbZBXEw-gplUAnMXLYHpg",
+        "https://bsky.app/profile/ericzemmour.bsky.social"
+      ],
+      "source": "https://www.slate.fr/story/256104/reconquete-elections-europeennes-zemmour-marechal-echecs-tensions-extreme-droite",
+      "note": "Président de Reconquête.",
+      "wikidata": "Q288477"
+    },
+    {
+      "name": "Reconquête",
+      "matchName": false,
+      "aliases": [
+        "parti Reconquête",
+        "Reconquête !",
+        "Reconquête!",
+        "@Reconquete_off"
+      ],
+      "accounts": [
+        "https://x.com/Reconquete_off",
+        "https://www.instagram.com/reconquete_officiel/",
+        "https://www.facebook.com/reconquete2022",
+        "https://www.youtube.com/channel/UCjtwBBNjlyd-wPmEFvgbK4w"
+      ],
+      "source": "https://www.slate.fr/story/256104/reconquete-elections-europeennes-zemmour-marechal-echecs-tensions-extreme-droite",
+      "note": "Parti d'Éric Zemmour. Le mot seul n'est pas filtré (mot courant), seulement ses variantes.",
+      "wikidata": "Q109932430"
+    },
+    {
+      "name": "Marion Maréchal",
+      "aliases": [
+        "Marion Maréchal-Le Pen",
+        "@MarionMarechal"
+      ],
+      "accounts": [
+        "https://x.com/MarionMarechal",
+        "https://www.instagram.com/marionmarechal_/",
+        "https://www.facebook.com/MarionMarechalOff",
+        "https://www.tiktok.com/@marion_marechal",
+        "https://www.youtube.com/channel/UCwupzUX-SYyt3y4yx8cYdpg"
+      ],
+      "source": "https://www.slate.fr/story/266331/marion-marechal-jordan-bardella-extreme-droite-reconquete-rassemblement-national-deux-visages",
+      "note": "Députée européenne.",
+      "wikidata": "Q292458"
+    },
+    {
+      "name": "Louis Aliot",
+      "aliases": [
+        "Aliot",
+        "@louis_aliot"
+      ],
+      "accounts": [
+        "https://x.com/louis_aliot",
+        "https://www.facebook.com/louisaliot.officiel"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q3261014",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Sébastien Chenu",
+      "aliases": [
+        "@sebchenu"
+      ],
+      "accounts": [
+        "https://x.com/sebchenu"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q21294609",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Edwige Diaz",
+      "aliases": [
+        "@diaz_edwige"
+      ],
+      "accounts": [
+        "https://x.com/diaz_edwige",
+        "https://www.facebook.com/DiazEdwige"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q63349008",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Julien Sanchez",
+      "aliases": [
+        "@jsanchez_fn"
+      ],
+      "accounts": [
+        "https://x.com/jsanchez_fn",
+        "https://www.instagram.com/jsanchez_rn/"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q28598564",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Steeve Briois",
+      "aliases": [
+        "Briois",
+        "@SteeveBriois"
+      ],
+      "accounts": [
+        "https://x.com/SteeveBriois",
+        "https://www.facebook.com/briois.steeve"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q3497810",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Thierry Mariani",
+      "aliases": [
+        "@ThierryMARIANI"
+      ],
+      "accounts": [
+        "https://x.com/ThierryMARIANI",
+        "https://www.instagram.com/mariani.thierry/",
+        "https://www.facebook.com/ThierryMariani",
+        "https://www.youtube.com/channel/UCf6mW4JUcQSL_GDSoRyyACQ"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q63655",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Fabrice Leggeri",
+      "aliases": [
+        "Leggeri",
+        "@fabriceleggeri"
+      ],
+      "accounts": [
+        "https://x.com/fabriceleggeri",
+        "https://www.instagram.com/fabriceleggeri/"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q23060444",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Laure Lavalette",
+      "aliases": [
+        "@LaureLavalette"
+      ],
+      "accounts": [
+        "https://x.com/LaureLavalette"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q112308110",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Franck Allisio",
+      "aliases": [
+        "@franckallisio"
+      ],
+      "accounts": [
+        "https://x.com/franckallisio",
+        "https://www.facebook.com/franckallisio",
+        "https://www.youtube.com/channel/UCWZt1s_z5wOC5jJt1wsVi-g"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q47539353",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Jean-Lin Lacapelle",
+      "aliases": [
+        "@jllacapelle"
+      ],
+      "accounts": [
+        "https://x.com/jllacapelle"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q42099949",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Philippe Olivier",
+      "aliases": [
+        "@PhOlivierRN"
+      ],
+      "accounts": [
+        "https://x.com/PhOlivierRN"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q18744905",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Malika Sorel",
+      "aliases": [
+        "@MalikaSorel"
+      ],
+      "accounts": [
+        "https://x.com/MalikaSorel"
+      ],
+      "source": "https://blog.landot-avocats.net/2026/03/03/nuancage-politique-et-tatonnements-juridiques-video-et-article-mise-a-jour-au-3-mars-2026-apres-la-non-censure-du-classement-du-rn-certes-mais-aussi-de-lfi-et-de-ludr-dans-les-extrem/",
+      "wikidata": "Q3282095",
+      "note": "Membre du Rassemblement national d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "Sarah Knafo",
+      "aliases": [
+        "Knafo",
+        "@knafo_sarah"
+      ],
+      "accounts": [
+        "https://x.com/knafo_sarah",
+        "https://www.instagram.com/sarahknafo1/",
+        "https://www.facebook.com/Sarah-Knafo-61559003907671",
+        "https://www.tiktok.com/@sarah_knafo",
+        "https://www.youtube.com/channel/UC8ba7bn2fuU_lsVweb4YM4Q"
+      ],
+      "source": "https://www.slate.fr/story/256104/reconquete-elections-europeennes-zemmour-marechal-echecs-tensions-extreme-droite",
+      "wikidata": "Q82637284",
+      "note": "Membre de Reconquête d'après Wikidata (consulté le 2026-10-28)."
+    }
+  ],
+  "domains": []
+}

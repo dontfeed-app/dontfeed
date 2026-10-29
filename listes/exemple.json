@@ -1,0 +1,24 @@
+{
+  "title": "Liste d'exemple (personnes fictives)",
+  "description": "Montre le format. Remplace ces entrées fictives par ta liste.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Jean Exemple",
+      "aliases": ["J. Exemple", "@jeanexemple"],
+      "accounts": [
+        "https://x.com/jeanexemple",
+        "https://www.instagram.com/jeanexemple/",
+        "https://www.youtube.com/@jeanexemple"
+      ],
+      "source": "https://exemple.org/article-qui-justifie-l-ajout",
+      "note": "Pourquoi cette personne est dans la liste, en une phrase."
+    },
+    {
+      "name": "Média Fictif",
+      "aliases": ["@mediafictif"],
+      "accounts": ["https://www.tiktok.com/@mediafictif"]
+    }
+  ],
+  "domains": ["media-fictif.example"]
+}

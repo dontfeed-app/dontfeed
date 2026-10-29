@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Don't Feed</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    body { width: 360px; padding: 16px; }
+    .wrap { display: flex; flex-direction: column; gap: 12px; }
+    .panel { padding: 14px; border-radius: 12px; }
+    .big { font-size: 40px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+    .sep { border-top: 1px solid var(--line); padding-top: 8px; }
+    .cta { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--accent-soft); border: 1px solid var(--accent-line); border-radius: 12px; padding: 12px 14px; color: var(--text); text-decoration: none; cursor: pointer; text-align: left; width: 100%; min-height: 56px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="row" style="justify-content: space-between">
+    <div class="logo" style="font-size: 16px">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="3" style="color: var(--accent)"></circle><path d="M7 7l18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="color: var(--accent)"></path></svg>
+      Don't Feed
+    </div>
+    <label class="switch" style="color: var(--text-2); font-size: 14px"><input type="checkbox" id="enabled"> <span data-i18n="popup_active"></span></label>
+  </div>
+
+  <div class="panel stack">
+    <div class="row" style="align-items: baseline"><span class="big" id="count">0</span><span style="color: var(--text-2); font-size: 14px" data-i18n="count_label"></span></div>
+    <div id="terms"></div>
+    <span class="faint" id="avoided"></span>
+    <label class="switch sep" style="color: var(--text-2); font-size: 14px"><input type="checkbox" id="paused"> <span data-i18n="pause_on"></span> <span class="mono" id="host" style="color: var(--text); font-size: 13px"></span></label>
+  </div>
+
+  <div class="panel stack">
+    <b style="font-size: 15px" data-i18n="block_someone"></b>
+    <form id="add" class="stack">
+      <label class="field"><span data-i18n="f_name"></span><input type="text" id="name" data-i18n-ph="ph_name" required minlength="3"></label>
+      <label class="field"><span data-i18n="f_aliases"></span><input type="text" id="aliases" data-i18n-ph="ph_aliases"></label>
+      <button class="primary" type="submit" style="justify-content: center" data-i18n="add_to_list"></button>
+      <span id="msg" class="muted" role="status"></span>
+    </form>
+    <span class="faint" data-i18n="ctx_hint"></span>
+  </div>
+
+  <button class="cta" id="source" type="button">
+    <span class="stack" style="gap: 2px">
+      <b style="font-size: 14.5px" data-i18n="src_title"></b>
+      <span id="sourceInfo" style="font-size: 12.5px; color: var(--text-2)"></span>
+    </span>
+    <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  </button>
+
+  <div class="row" style="justify-content: space-between">
+    <div class="seg" role="group">
+      <button type="button" data-mode="blur" data-i18n="mode_blur"></button>
+      <button type="button" data-mode="hide" data-i18n="mode_hide"></button>
+    </div>
+    <button class="link" id="options" type="button" data-i18n="manage"></button>
+  </div>
+  <p class="faint" style="text-align: center; line-height: 1.5" data-i18n="rules_short"></p>
+  <span class="faint" id="version" style="text-align: center"></span>
+</div>
+<script src="lib/core.js"></script>
+<script src="lib/i18n.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don't Feed</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    main { max-width: 960px; margin: 0 auto; padding: 40px 24px 64px; display: flex; flex-direction: column; gap: 28px; }
+    header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .hero { padding: 32px; display: flex; flex-direction: column; gap: 24px; }
+    .hero h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.02em; }
+    .hero p.lead { font-size: 16px; line-height: 1.55; color: var(--text-2); max-width: 680px; }
+    .kicker { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .step { display: flex; flex-direction: column; gap: 6px; padding: 16px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); }
+    .step .n { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+    .step b { font-size: 15px; }
+    .step span:last-child { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .stat { padding: 14px 16px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); }
+    .stat b { display: block; font-size: 28px; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+    .stat span { font-size: 13px; color: var(--muted); }
+    @media (max-width: 720px) { .steps { grid-template-columns: minmax(0, 1fr); } .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { padding: 22px; } .hero h1 { font-size: 27px; } }
+    nav.tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+    nav.tabs button { border: none; border-radius: 0; min-height: 44px; font-size: 15px; color: var(--faint); padding: 0 14px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+    nav.tabs button[aria-selected="true"] { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+    section.tab { display: flex; flex-direction: column; gap: 18px; }
+    section.tab h2 { font-size: 22px; }
+    .card-list { padding: 0; overflow: hidden; }
+    .person { display: flex; gap: 16px; align-items: center; padding: 18px 20px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+    .person:first-child { border-top: none; }
+    .person .who { flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+    .person .who b { font-size: 16px; }
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+    .countries { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+    .country { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+    .empty { padding: 20px; color: var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div class="logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="3" style="color: var(--accent)"></circle><path d="M7 7l18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="color: var(--accent)"></path></svg>
+      Don't Feed
+    </div>
+    <div class="row muted"><span class="dot" id="statusDot"></span><span id="statusText"></span></div>
+  </header>
+
+  <section class="panel hero" aria-labelledby="heroTitle">
+    <div class="stack" style="gap: 10px">
+      <span class="kicker" data-i18n="kicker_why"></span>
+      <h1 id="heroTitle" data-i18n="hero_title"></h1>
+      <p class="lead" data-i18n="hero_p1"></p>
+      <p class="lead" data-i18n="hero_p2"></p>
+    </div>
+    <span class="kicker" data-i18n="kicker_rules"></span>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><b data-i18n="r1_t"></b><span data-i18n="r1_d"></span></div>
+      <div class="step"><span class="n">02</span><b data-i18n="r2_t"></b><span data-i18n="r2_d"></span></div>
+      <div class="step"><span class="n">03</span><b data-i18n="r3_t"></b><span data-i18n="r3_d"></span></div>
+    </div>
+    <div class="stack" id="choiceRow" style="gap: 10px">
+      <b style="font-size: 15px" data-i18n="choice_q"></b>
+      <label class="field" style="max-width: 320px"><span data-i18n="choice_country"></span><select id="choiceCountry"></select></label>
+      <div class="row">
+        <button class="primary" id="choiceBlur" type="button" data-i18n="choice_blur"></button>
+        <button class="primary" id="choiceSource" type="button" style="background: transparent; color: var(--text); border-color: var(--accent)" data-i18n="choice_source"></button>
+      </div>
+      <span class="muted" data-i18n="choice_note"></span>
+    </div>
+    <div class="stack" id="statsBox" style="gap: 8px" hidden>
+      <span class="kicker" data-i18n="stats_title"></span>
+      <div class="stats">
+        <div class="stat"><b id="stToday">0</b><span data-i18n="stats_today"></span></div>
+        <div class="stat"><b id="stWeek">0</b><span data-i18n="stats_week"></span></div>
+        <div class="stat"><b id="stMonth">0</b><span data-i18n="stats_month"></span></div>
+        <div class="stat"><b id="stTotal">0</b><span data-i18n="stats_total"></span></div>
+      </div>
+      <span class="faint" data-i18n="stats_note"></span>
+    </div>
+    <span class="muted" id="starterInfo" hidden></span>
+  </section>
+
+  <nav class="tabs" id="tabs" role="tablist">
+    <button role="tab" data-tab="source" aria-selected="true" data-i18n="tab_source"></button>
+    <button role="tab" data-tab="perso" aria-selected="false" data-i18n="tab_perso"></button>
+    <button role="tab" data-tab="subs" aria-selected="false" data-i18n="tab_subs"></button>
+    <button role="tab" data-tab="sites" aria-selected="false" data-i18n="tab_sites"></button>
+    <button role="tab" data-tab="reglages" aria-selected="false" data-i18n="tab_settings"></button>
+  </nav>
+
+  <!-- BLOQUER A LA SOURCE -->
+  <section class="tab" id="source">
+    <div class="row" style="justify-content: space-between; align-items: flex-end; gap: 16px">
+      <div class="stack" style="gap: 4px; flex: 1 1 380px">
+        <h2 data-i18n="src_title"></h2>
+        <p class="muted" data-i18n="src_desc"></p>
+      </div>
+      <div class="stack" style="gap: 6px; min-width: 220px">
+        <div class="row" style="justify-content: space-between; font-size: 13px"><span class="muted" data-i18n="progress"></span><span class="mono" id="srcStats">0 / 0</span></div>
+        <div class="progress"><div id="srcBar"></div></div>
+      </div>
+    </div>
+    <div class="row" id="srcPlatforms" role="group"></div>
+    <label class="switch muted"><input type="checkbox" id="srcHideDone"> <span data-i18n="hide_done"></span></label>
+    <div class="panel card-list" id="srcList"></div>
+    <p class="faint" data-i18n="src_hint"></p>
+  </section>
+
+  <!-- MA LISTE -->
+  <section class="tab" id="perso" hidden>
+    <div class="panel stack">
+      <h2 style="font-size: 17px" data-i18n="add_title"></h2>
+      <form id="addForm" class="stack">
+        <div class="row">
+          <label class="field grow"><span data-i18n="f_name"></span><input type="text" id="addName" data-i18n-ph="ph_name" required minlength="3"></label>
+          <label class="field grow"><span data-i18n="f_aliases"></span><input type="text" id="addAliases" data-i18n-ph="ph_aliases"></label>
+        </div>
+        <div class="row" style="align-items: flex-end">
+          <label class="field grow"><span data-i18n="f_accounts"></span><input type="text" id="addAccounts" placeholder="https://x.com/..., https://www.instagram.com/.../"></label>
+          <button class="primary" type="submit" data-i18n="btn_add"></button>
+        </div>
+      </form>
+    </div>
+    <div class="panel">
+      <div class="row" style="justify-content: space-between; margin-bottom: 6px">
+        <h2 style="font-size: 17px"><span data-i18n="tab_perso"></span> (<span id="persoCount">0</span>)</h2>
+        <input type="search" id="persoFilter" data-i18n-ph="filter" style="width: 220px">
+      </div>
+      <ul class="list" id="persoList"></ul>
+    </div>
+    <div class="panel stack">
+      <h2 style="font-size: 17px" data-i18n="share_title"></h2>
+      <p class="muted" data-i18n="share_desc"></p>
+      <div class="row">
+        <button id="exportBtn" type="button" data-i18n="export"></button>
+        <button id="importBtn" type="button" data-i18n="import"></button>
+        <input type="file" id="importFile" accept=".json,.txt" hidden>
+        <span id="importMsg" class="muted"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABONNEMENTS -->
+  <section class="tab" id="subs" hidden>
+    <div class="panel stack">
+      <h2 style="font-size: 17px" data-i18n="country_title"></h2>
+      <p class="muted" data-i18n="country_desc"></p>
+      <div class="countries" id="countryList"></div>
+    </div>
+    <div class="panel stack">
+      <h2 style="font-size: 17px" data-i18n="sub_title"></h2>
+      <p class="muted" data-i18n="sub_desc"></p>
+      <form id="subForm" class="row">
+        <input class="grow" type="url" id="subUrl" placeholder="https://raw.githubusercontent.com/.../liste.json" required>
+        <button class="primary" type="submit" data-i18n="subscribe"></button>
+      </form>
+    </div>
+    <div class="panel">
+      <div class="row" style="justify-content: space-between; margin-bottom: 6px">
+        <h2 style="font-size: 17px" data-i18n="my_subs"></h2>
+        <button id="refreshBtn" type="button" data-i18n="refresh_all"></button>
+      </div>
+      <ul class="list" id="subList"></ul>
+    </div>
+    <div class="panel stack">
+      <h2 style="font-size: 17px" data-i18n="allow_title"></h2>
+      <p class="muted" data-i18n="allow_desc"></p>
+      <textarea id="allow"></textarea>
+      <div class="row"><button id="allowSave" type="button" data-i18n="save"></button><span id="allowMsg" class="muted"></span></div>
+    </div>
+  </section>
+
+  <!-- SITES -->
+  <section class="tab" id="sites" hidden>
+    <div class="panel stack">
+      <h2 style="font-size: 17px" data-i18n="sites_title"></h2>
+      <p class="muted" data-i18n="sites_desc"></p>
+      <textarea id="domains"></textarea>
+      <div class="row"><button id="domainsSave" type="button" data-i18n="save"></button><span id="domainsMsg" class="muted"></span></div>
+    </div>
+  </section>
+
+  <!-- REGLAGES -->
+  <section class="tab" id="reglages" hidden>
+    <div class="panel stack">
+      <h2 style="font-size: 17px" data-i18n="display"></h2>
+      <label class="switch"><input type="checkbox" id="enabled"> <span data-i18n="enabled_lbl"></span></label>
+      <label class="switch"><input type="checkbox" id="showSource"> <span data-i18n="show_source_lbl"></span></label>
+      <label class="switch"><input type="radio" name="mode" value="blur"> <span data-i18n="mode_blur_lbl"></span></label>
+      <label class="switch"><input type="radio" name="mode" value="hide"> <span data-i18n="mode_hide_lbl"></span></label>
+      <label class="field" style="max-width: 320px; margin-top: 6px"><span data-i18n="language"></span><select id="langSel"></select></label>
+    </div>
+    <div class="panel">
+      <h2 style="font-size: 17px; margin-bottom: 6px" data-i18n="paused_title"></h2>
+      <ul class="list" id="pausedList"></ul>
+    </div>
+  </section>
+</main>
+<script src="lib/core.js"></script>
+<script src="lib/i18n.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

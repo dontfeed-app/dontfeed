@@ -1,0 +1,106 @@
+{
+  "title": "Italia: lista iniziale (Fratelli d'Italia, Lega, Futuro Nazionale)",
+  "lang": "it",
+  "country": "IT",
+  "description": "Partiti descritti come di estrema destra dalla stampa internazionale: Fratelli d'Italia (NBC News: governo « far right-led », partito dalle « radici neofasciste »), Lega (Reuters, 25/10/2026: « far-right League party »), Futuro Nazionale (Reuters, 14/06/2026). Elezioni politiche previste nel 2027. Account ufficiali da Wikidata al 28/10/2026.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Fratelli d'Italia",
+      "aliases": [
+        "!FdI"
+      ],
+      "accounts": [
+        "https://www.instagram.com/fratelliditalia/",
+        "https://www.facebook.com/fratelliditalia.paginaufficiale",
+        "https://www.youtube.com/channel/UC74FLAfxj6U1Q8O67hz8XjQ"
+      ],
+      "source": "https://www.nbcnews.com/news/world/italy-far-right-leader-giorgia-meloni-new-government-fascist-roots-rcna53453",
+      "note": "Partito della presidente del Consiglio.",
+      "wikidata": "Q1757843"
+    },
+    {
+      "name": "Giorgia Meloni",
+      "aliases": [
+        "Meloni",
+        "@GiorgiaMeloni"
+      ],
+      "accounts": [
+        "https://x.com/GiorgiaMeloni",
+        "https://www.instagram.com/giorgiameloni/",
+        "https://www.facebook.com/giorgiameloni.paginaufficiale",
+        "https://www.tiktok.com/@giorgiameloni_ufficiale",
+        "https://www.youtube.com/channel/UCV4qYSrIACV7vMg3CuQ07ag"
+      ],
+      "source": "https://www.nbcnews.com/news/world/italy-far-right-leader-giorgia-meloni-new-government-fascist-roots-rcna53453",
+      "note": "Presidente del Consiglio, leader di Fratelli d'Italia.",
+      "wikidata": "Q451791"
+    },
+    {
+      "name": "Lega",
+      "matchName": false,
+      "aliases": [
+        "Lega per Salvini Premier",
+        "Lega Nord",
+        "@LegaSalvini"
+      ],
+      "accounts": [
+        "https://x.com/LegaSalvini",
+        "https://www.instagram.com/legaofficial/",
+        "https://www.facebook.com/legasalvinipremier",
+        "https://www.youtube.com/channel/UCw2AF_J2QizzmWw99bs3e6Q"
+      ],
+      "source": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/25/italy-s-league-leader-salvini-secures-reappointment-ahead-of-polls-next-year",
+      "note": "Partito. Il nome da solo non è cercato (parola comune).",
+      "wikidata": "Q85776185"
+    },
+    {
+      "name": "Matteo Salvini",
+      "aliases": [
+        "Salvini",
+        "@matteosalvinimi"
+      ],
+      "accounts": [
+        "https://x.com/matteosalvinimi",
+        "https://www.instagram.com/matteosalviniofficial/",
+        "https://www.facebook.com/salviniofficial",
+        "https://www.tiktok.com/@matteosalviniufficiale",
+        "https://www.youtube.com/channel/UCDjM54fZ-cD7F8uom767OhA"
+      ],
+      "source": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/25/italy-s-league-leader-salvini-secures-reappointment-ahead-of-polls-next-year",
+      "note": "Segretario della Lega.",
+      "wikidata": "Q1055449"
+    },
+    {
+      "name": "Futuro Nazionale",
+      "matchName": true,
+      "aliases": [
+        "partito di Vannacci"
+      ],
+      "accounts": [
+        "https://www.instagram.com/futuro_nazionale_ufficiale/",
+        "https://www.facebook.com/profile.php?id=61587862590908"
+      ],
+      "source": "https://www.internazionale.it/ultime-notizie-reuters/2026/06/14/italian-general-launches-far-right-party-threatening-meloni-s-election-hopes",
+      "note": "Partito fondato da Roberto Vannacci il 14 giugno 2026.",
+      "wikidata": "Q138007582"
+    },
+    {
+      "name": "Roberto Vannacci",
+      "aliases": [
+        "Vannacci",
+        "@RoVannacci"
+      ],
+      "accounts": [
+        "https://x.com/RoVannacci",
+        "https://www.instagram.com/roberto.vannacci.68/",
+        "https://www.facebook.com/profile.php?id=61557977492503",
+        "https://www.tiktok.com/@vannacciroberto"
+      ],
+      "source": "https://www.internazionale.it/ultime-notizie-reuters/2026/06/14/italian-general-launches-far-right-party-threatening-meloni-s-election-hopes",
+      "note": "Fondatore di Futuro Nazionale.",
+      "wikidata": "Q117037367"
+    }
+  ],
+  "domains": []
+}

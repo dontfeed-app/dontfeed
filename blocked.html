@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don't Feed</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    body { display: grid; place-items: center; min-height: 100vh; padding: 24px; }
+    .box { max-width: 440px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+    h1 { font-size: 28px; letter-spacing: -0.02em; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <svg width="56" height="56" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2.5" style="color: var(--accent)"></circle><path d="M7 7l18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="color: var(--accent)"></path></svg>
+    <span class="mono muted" id="domain"></span>
+    <h1 data-i18n="blocked_h"></h1>
+    <p style="color: var(--text-2)" data-i18n="blocked_p"></p>
+    <p class="muted" data-i18n="blocked_tip"></p>
+    <div class="row" style="justify-content: center; margin-top: 8px">
+      <button id="back" class="primary" type="button" data-i18n="back"></button>
+      <button id="options" type="button" style="min-height: 44px" data-i18n="manage_sites"></button>
+    </div>
+  </div>
+  <script src="lib/i18n.js"></script>
+  <script src="blocked.js"></script>
+</body>
+</html>

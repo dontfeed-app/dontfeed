@@ -1,0 +1,37 @@
+{
+  "title": "Polska: lista startowa (Korona)",
+  "lang": "pl",
+  "country": "PL",
+  "description": "Konfederacja Korony Polskiej i jej lider Grzegorz Braun, opisany jako lider skrajnej prawicy przez Notes from Poland (01.2026). Wybory parlamentarne w 2027. Oficjalne konta z Wikidata, 28.10.2026.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Grzegorz Braun",
+      "aliases": [
+        "Braun",
+        "@GrzegorzBraun_"
+      ],
+      "accounts": [
+        "https://x.com/GrzegorzBraun_",
+        "https://www.instagram.com/grzegorzbraun_/",
+        "https://www.facebook.com/grzegorz.michal.braun",
+        "https://www.tiktok.com/@grzegorzbraun_",
+        "https://www.youtube.com/channel/UCDV5V9-Dlx6jisC59QYP_kA"
+      ],
+      "source": "https://notesfrompoland.com/2026/01/07/polish-far-right-leader-braun-names-man-on-trial-for-russian-espionage-as-election-candidate/",
+      "note": "Lider Konfederacji Korony Polskiej.",
+      "wikidata": "Q168205"
+    },
+    {
+      "name": "Konfederacja Korony Polskiej",
+      "aliases": [
+        "Korona Braun"
+      ],
+      "accounts": [],
+      "source": "https://notesfrompoland.com/2026/01/07/polish-far-right-leader-braun-names-man-on-trial-for-russian-espionage-as-election-candidate/",
+      "note": "Partia.",
+      "wikidata": "Q80578532"
+    }
+  ],
+  "domains": []
+}

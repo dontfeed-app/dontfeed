@@ -1,0 +1,65 @@
+{
+  "title": "United States: starter list (far-right figures)",
+  "lang": "en",
+  "country": "US",
+  "description": "Public figures described as far-right, white nationalist or alt-right by major outlets: Laura Loomer and Alex Jones (PBS NewsHour, Aug. 2025), Nick Fuentes (Media Matters via Political Research Associates, June 2025), Steve Bannon (NBC News, 2016). Midterm elections on November 3, 2026. Official accounts from Wikidata, 2026-10-28.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Laura Loomer",
+      "aliases": [
+        "Loomer",
+        "@LauraLoomer"
+      ],
+      "accounts": [
+        "https://x.com/LauraLoomer",
+        "https://www.instagram.com/loomered/",
+        "https://www.facebook.com/lauraloomerofficial",
+        "https://www.youtube.com/channel/UCsWnDtLWKEMJHKYCc9647yQ"
+      ],
+      "source": "https://www.pbs.org/newshour/show/how-far-right-activist-laura-loomer-is-shaping-the-trump-administration",
+      "note": "Described by PBS NewsHour as a far-right activist.",
+      "wikidata": "Q30322608"
+    },
+    {
+      "name": "Alex Jones",
+      "aliases": [
+        "Infowars",
+        "@RealAlexJones"
+      ],
+      "accounts": [
+        "https://x.com/RealAlexJones"
+      ],
+      "source": "https://www.pbs.org/newshour/show/how-far-right-activist-laura-loomer-is-shaping-the-trump-administration",
+      "note": "Infowars founder, described by PBS as a promoter of radical-right conspiracy theories.",
+      "wikidata": "Q319121"
+    },
+    {
+      "name": "Nick Fuentes",
+      "aliases": [
+        "Fuentes",
+        "@NickJFuentes",
+        "groypers"
+      ],
+      "accounts": [
+        "https://x.com/NickJFuentes",
+        "https://www.instagram.com/nicholasjfuentes/",
+        "https://www.youtube.com/channel/UCsJ86N5n7fcEC_Ds8dYJKzA"
+      ],
+      "source": "https://politicalresearch.org/strategy/pra-news/white-nationalist-streamer-nick-fuentes-declares-groypers-have-won-right-now-so",
+      "note": "Described as a white nationalist streamer and Holocaust denier.",
+      "wikidata": "Q51120751"
+    },
+    {
+      "name": "Steve Bannon",
+      "aliases": [
+        "Bannon"
+      ],
+      "accounts": [],
+      "source": "https://www.nbcnews.com/politics/white-house/analysis-breitbart-s-steve-bannon-leads-alt-right-white-house-n683316",
+      "note": "Former Breitbart head, who called the site 'the platform of the alt-right'.",
+      "wikidata": "Q16146870"
+    }
+  ],
+  "domains": []
+}

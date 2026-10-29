@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111214">
+<title>Don't Feed · Bloquer depuis ton téléphone</title>
+<meta name="description" content="Bloque les comptes d'extrême droite sur Instagram, TikTok, X, YouTube et Facebook depuis ton téléphone, un par un. Gratuit, sans compte, aucune donnée collectée.">
+<link rel="icon" href="../icons/128.png">
+<style>
+  :root {
+    --bg: #111214; --panel: #1a1c1f; --raised: #23262b; --line: #2a2d31; --text: #ecebe6; --text-2: #c4c3bd;
+    --muted: #a3a39d; --accent: #8fa8ff; --on-accent: #0e1430; --ok: #6bd38f; --ok-soft: #16301f; --ok-line: #2e5a3c;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f5f1; --panel: #fff; --raised: #eeede8; --line: #dddbd4; --text: #17181a; --text-2: #3c3d40;
+      --muted: #5f605c; --accent: #2a4bd7; --on-accent: #fff; --ok: #2e7d32; --ok-soft: #e6f4e7; --ok-line: #a9d3ac; color-scheme: light; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-text-size-adjust: 100%; }
+  main { max-width: 560px; margin: 0 auto; padding: 20px 16px calc(40px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 16px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; }
+  h1 { font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; margin: 6px 0 0; }
+  p { margin: 0; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+  .rules { display: flex; flex-direction: column; gap: 6px; font-size: 14.5px; color: var(--text-2); margin: 0; padding-left: 20px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  select { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 0 12px; min-height: 44px; width: 100%; }
+  label.field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); flex: 1 1 140px; }
+  .chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+  .chip { font: inherit; font-size: 14px; flex: none; min-height: 38px; padding: 0 14px; border-radius: 99px; border: 1px solid var(--line); background: transparent; color: var(--text-2); }
+  .chip[aria-pressed="true"] { border-color: var(--accent); color: var(--text); background: color-mix(in srgb, var(--accent) 18%, transparent); }
+  .progress { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+  .progress > div { height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+  .card { display: flex; flex-direction: column; gap: 14px; text-align: center; padding: 22px 18px; }
+  .card .who { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+  .card .plat { font-size: 15px; color: var(--muted); }
+  .btn { font: inherit; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; border-radius: 14px; border: 1px solid var(--line); background: transparent; color: var(--text); text-decoration: none; font-weight: 600; font-size: 16px; width: 100%; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-size: 17px; min-height: 58px; }
+  .btn.ok { background: var(--ok-soft); border-color: var(--ok-line); color: var(--ok); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .done-box { text-align: center; padding: 28px 18px; display: flex; flex-direction: column; gap: 10px; }
+  details summary { cursor: pointer; font-weight: 600; min-height: 32px; }
+  ul.all { list-style: none; margin: 10px 0 0; padding: 0; }
+  ul.all li { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; }
+  ul.all li a { color: var(--accent); text-decoration: none; white-space: nowrap; }
+  ul.all li.done { opacity: .55; }
+  .src { color: var(--muted); font-size: 12.5px; }
+  .src a, footer a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 13px; text-align: center; line-height: 1.6; }
+  button.link { font: inherit; background: none; border: 0; color: var(--accent); padding: 4px; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="3" style="color: var(--accent)"/><path d="M7 7l18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="color: var(--accent)"/></svg>
+      Don't Feed
+    </div>
+    <select id="lang" aria-label="Langue" style="width: auto; min-height: 36px; font-size: 14px"></select>
+  </header>
+
+  <section>
+    <h1 data-t="title"></h1>
+    <p class="muted" style="margin-top: 8px" data-t="lead"></p>
+  </section>
+
+  <section class="panel">
+    <ol class="rules">
+      <li data-t="r1"></li>
+      <li data-t="r2"></li>
+      <li data-t="r3"></li>
+    </ol>
+  </section>
+
+  <section class="panel" style="display: flex; flex-direction: column; gap: 12px">
+    <div class="row">
+      <label class="field"><span data-t="country"></span><select id="country"></select></label>
+    </div>
+    <div class="chips" id="plats" role="group"></div>
+    <div>
+      <div class="row" style="justify-content: space-between; font-size: 14px; margin-bottom: 6px"><span class="muted" data-t="progress"></span><b id="count">0 / 0</b></div>
+      <div class="progress"><div id="bar"></div></div>
+    </div>
+  </section>
+
+  <section class="panel card" id="card" aria-live="polite">
+    <div class="plat" id="cPlat"></div>
+    <div class="who" id="cName"></div>
+    <div class="muted" id="cNote"></div>
+    <a class="btn primary" id="cOpen" target="_blank" rel="noopener noreferrer"></a>
+    <p class="muted" data-t="howto"></p>
+    <div class="two">
+      <button class="btn" id="cSkip" type="button" data-t="skip"></button>
+      <button class="btn ok" id="cDone" type="button" data-t="blocked"></button>
+    </div>
+    <div class="src" id="cSrc"></div>
+  </section>
+
+  <section class="panel done-box" id="finished" hidden>
+    <div style="font-size: 40px" aria-hidden="true">✓</div>
+    <b style="font-size: 20px" data-t="finished"></b>
+    <p class="muted" data-t="finished_sub"></p>
+  </section>
+
+  <section class="panel">
+    <details>
+      <summary data-t="all"></summary>
+      <ul class="all" id="all"></ul>
+    </details>
+  </section>
+
+  <footer>
+    <p data-t="privacy"></p>
+    <p><span data-t="computer"></span> <a href="https://github.com/dontfeed-app/dontfeed">github.com/dontfeed-app/dontfeed</a></p>
+    <p><button class="link" id="reset" type="button" data-t="reset"></button></p>
+  </footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const T = {
+    fr: { title: 'Bloque-les depuis ton téléphone.', lead: "Un compte à la fois : le bouton ouvre le profil dans l'appli (Instagram, TikTok, X...), tu bloques, tu reviens ici, compte suivant.", r1: 'Tu ne commentes plus. Même pour clasher.', r2: 'Tu ne partages plus. Pour montrer : une capture, pas un lien.', r3: "Tu bloques. Le compte, le média, l'influenceur.", country: 'Liste', progress: 'Comptes bloqués', all_p: 'Toutes', open: 'Ouvrir dans {p}', howto: "Dans l'appli : touche « ··· » sur le profil, puis « Bloquer ». Reviens ensuite ici.", skip: 'Passer', blocked: "C'est bloqué", finished: 'Tout est bloqué pour cette sélection.', finished_sub: "Change de liste ou de plateforme, ou partage la page à quelqu'un.", all: 'Voir tous les comptes', open_short: 'Ouvrir', source: 'source', privacy: 'Aucune donnée collectée : ta progression reste sur ce téléphone.', computer: "Sur ordinateur, l'extension floute aussi ces contenus :", reset: 'Remettre la progression à zéro', reset_q: 'Remettre la progression à zéro ?', loading: 'Chargement…', error: 'Liste indisponible pour le moment.' },
+    en: { title: 'Block them from your phone.', lead: 'One account at a time: the button opens the profile in the app (Instagram, TikTok, X...), you block, come back here, next account.', r1: "Don't comment. Not even to argue.", r2: "Don't share. To show it: a screenshot, not a link.", r3: 'Block. The account, the outlet, the influencer.', country: 'List', progress: 'Accounts blocked', all_p: 'All', open: 'Open in {p}', howto: 'In the app: tap "···" on the profile, then "Block". Then come back here.', skip: 'Skip', blocked: 'Blocked', finished: 'Everything is blocked for this selection.', finished_sub: 'Pick another list or platform, or share this page with someone.', all: 'See all accounts', open_short: 'Open', source: 'source', privacy: 'No data collected: your progress stays on this phone.', computer: 'On a computer, the extension also blurs this content:', reset: 'Reset progress', reset_q: 'Reset progress?', loading: 'Loading…', error: 'List unavailable right now.' },
+    es: { title: 'Bloquéalos desde tu móvil.', lead: 'Una cuenta cada vez: el botón abre el perfil en la app (Instagram, TikTok, X...), bloqueas, vuelves aquí y pasas a la siguiente.', r1: 'No comentas. Ni para rebatir.', r2: 'No compartes. Para enseñarlo: una captura, no un enlace.', r3: 'Bloqueas. La cuenta, el medio, el influencer.', country: 'Lista', progress: 'Cuentas bloqueadas', all_p: 'Todas', open: 'Abrir en {p}', howto: 'En la app: toca «···» en el perfil y luego «Bloquear». Después vuelve aquí.', skip: 'Saltar', blocked: 'Bloqueada', finished: 'Todo bloqueado para esta selección.', finished_sub: 'Cambia de lista o de plataforma, o comparte la página.', all: 'Ver todas las cuentas', open_short: 'Abrir', source: 'fuente', privacy: 'No se recoge ningún dato: tu progreso se queda en este móvil.', computer: 'En el ordenador, la extensión también difumina estos contenidos:', reset: 'Reiniciar el progreso', reset_q: '¿Reiniciar el progreso?', loading: 'Cargando…', error: 'Lista no disponible por ahora.' },
+    pt: { title: 'Bloqueie pelo celular.', lead: 'Uma conta por vez: o botão abre o perfil no app (Instagram, TikTok, X...), você bloqueia, volta aqui e passa para a próxima.', r1: 'Não comente. Nem para rebater.', r2: 'Não compartilhe. Para mostrar: print, não link.', r3: 'Bloqueie. A conta, o veículo, o influenciador.', country: 'Lista', progress: 'Contas bloqueadas', all_p: 'Todas', open: 'Abrir no {p}', howto: 'No app: toque em «···» no perfil e depois em «Bloquear». Depois volte aqui.', skip: 'Pular', blocked: 'Bloqueada', finished: 'Tudo bloqueado nesta seleção.', finished_sub: 'Troque de lista ou de plataforma, ou compartilhe a página.', all: 'Ver todas as contas', open_short: 'Abrir', source: 'fonte', privacy: 'Nenhum dado coletado: seu progresso fica neste celular.', computer: 'No computador, a extensão também desfoca esses conteúdos:', reset: 'Zerar o progresso', reset_q: 'Zerar o progresso?', loading: 'Carregando…', error: 'Lista indisponível no momento.' },
+    de: { title: 'Blockiere sie vom Handy aus.', lead: 'Ein Konto nach dem anderen: Der Button öffnet das Profil in der App (Instagram, TikTok, X...), du blockierst, kommst zurück, nächstes Konto.', r1: 'Nicht kommentieren. Auch nicht kritisch.', r2: 'Nicht teilen. Zum Zeigen: Screenshot statt Link.', r3: 'Blockieren. Das Konto, das Medium, den Influencer.', country: 'Liste', progress: 'Blockierte Konten', all_p: 'Alle', open: 'In {p} öffnen', howto: 'In der App: Auf dem Profil „···“ tippen, dann „Blockieren“. Danach hierher zurückkommen.', skip: 'Überspringen', blocked: 'Blockiert', finished: 'Für diese Auswahl ist alles blockiert.', finished_sub: 'Wähle eine andere Liste oder Plattform oder teile die Seite.', all: 'Alle Konten anzeigen', open_short: 'Öffnen', source: 'Quelle', privacy: 'Keine Datenerfassung: Dein Fortschritt bleibt auf diesem Handy.', computer: 'Am Computer macht die Erweiterung diese Inhalte auch unscharf:', reset: 'Fortschritt zurücksetzen', reset_q: 'Fortschritt zurücksetzen?', loading: 'Lädt…', error: 'Liste gerade nicht verfügbar.' },
+    it: { title: 'Bloccali dal telefono.', lead: "Un account alla volta: il pulsante apre il profilo nell'app (Instagram, TikTok, X...), blocchi, torni qui, account successivo.", r1: 'Non commenti più. Nemmeno per ribattere.', r2: 'Non condividi più. Per mostrare: uno screenshot, non un link.', r3: "Blocchi. L'account, il media, l'influencer.", country: 'Lista', progress: 'Account bloccati', all_p: 'Tutte', open: 'Apri in {p}', howto: "Nell'app: tocca «···» sul profilo, poi «Blocca». Poi torna qui.", skip: 'Salta', blocked: 'Bloccato', finished: 'Tutto bloccato per questa selezione.', finished_sub: 'Cambia lista o piattaforma, oppure condividi la pagina.', all: 'Vedi tutti gli account', open_short: 'Apri', source: 'fonte', privacy: 'Nessun dato raccolto: i tuoi progressi restano su questo telefono.', computer: "Sul computer, l'estensione sfoca anche questi contenuti:", reset: 'Azzera i progressi', reset_q: 'Azzerare i progressi?', loading: 'Caricamento…', error: 'Lista non disponibile al momento.' },
+  };
+  const LISTS = {
+    FR: ['🇫🇷 France', 'fr-depart.json', 'fr'], ES: ['🇪🇸 España', 'es.json', 'es'], IT: ['🇮🇹 Italia', 'it.json', 'it'],
+    PL: ['🇵🇱 Polska', 'pl.json', 'en'], DE: ['🇩🇪 Deutschland', 'de.json', 'de'], BR: ['🇧🇷 Brasil', 'br.json', 'pt'], US: ['🇺🇸 United States', 'us.json', 'en'],
+  };
+  const PLATS = { 'x.com': 'X', 'twitter.com': 'X', 'instagram.com': 'Instagram', 'tiktok.com': 'TikTok', 'youtube.com': 'YouTube', 'facebook.com': 'Facebook', 'bsky.app': 'Bluesky' };
+  const ORDER = ['Instagram', 'TikTok', 'X', 'YouTube', 'Facebook', 'Bluesky'];
+  const $ = (id) => document.getElementById(id);
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* navigation privée */ } },
+  };
+  const navLang = (navigator.language || 'en').toLowerCase();
+  let lang = store.get('frb-lang', null) || (T[navLang.slice(0, 2)] ? navLang.slice(0, 2) : 'en');
+  const guessCountry = () => {
+    const p = navLang.slice(0, 2);
+    if (p === 'pt') return 'BR';
+    if (p === 'en') return navLang === 'en-us' ? 'US' : 'FR';
+    const hit = Object.entries(LISTS).find(([, v]) => v[2] === p);
+    return hit ? hit[0] : 'FR';
+  };
+  const params = new URLSearchParams(location.search);
+  let country = (params.get('pays') || params.get('country') || store.get('frb-country', null) || guessCountry()).toUpperCase();
+  if (!LISTS[country]) country = 'FR';
+  let plat = store.get('frb-plat', '');
+  let done = store.get('frb-done', {});
+  let skipped = new Set();
+  let items = [];
+  let entriesById = {};
+  const t = (k, v) => { let s = (T[lang] && T[lang][k]) || T.en[k] || k; if (v) for (const [a, b] of Object.entries(v)) s = s.split('{' + a + '}').join(b); return s; };
+
+  function applyLang() {
+    document.documentElement.lang = lang;
+    for (const el of document.querySelectorAll('[data-t]')) el.textContent = t(el.getAttribute('data-t'));
+    $('lang').replaceChildren(...Object.keys(T).map((l) => { const o = document.createElement('option'); o.value = l; o.textContent = l.toUpperCase(); return o; }));
+    $('lang').value = lang;
+  }
+  function fillCountries() {
+    $('country').replaceChildren(...Object.entries(LISTS).map(([k, v]) => { const o = document.createElement('option'); o.value = k; o.textContent = v[0]; return o; }));
+    $('country').value = country;
+  }
+  function platformOf(url) { try { const h = new URL(url).hostname.replace(/^(www|m|mobile)\./, ''); return PLATS[h] || null; } catch (e) { return null; } }
+
+  async function load() {
+    $('cName').textContent = t('loading');
+    try {
+      const res = await fetch('../listes/' + LISTS[country][1], { cache: 'no-cache' });
+      const list = await res.json();
+      items = [];
+      for (const e of list.entries || []) for (const url of e.accounts || []) {
+        const p = platformOf(url);
+        if (p) items.push({ url, p, name: e.name, note: e.note || '', source: e.source || '' });
+      }
+      items.sort((a, b) => ORDER.indexOf(a.p) - ORDER.indexOf(b.p));
+      skipped = new Set();
+      render();
+    } catch (e) {
+      $('cName').textContent = t('error');
+    }
+  }
+
+  function visible() { return items.filter((i) => !plat || i.p === plat); }
+  function render() {
+    const plats = [...new Set(items.map((i) => i.p))];
+    if (plat && !plats.includes(plat)) plat = '';
+    $('plats').replaceChildren(...['', ...plats].map((p) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.textContent = p || t('all_p'); b.setAttribute('aria-pressed', String(plat === p));
+      b.onclick = () => { plat = p; store.set('frb-plat', p); skipped = new Set(); render(); };
+      return b;
+    }));
+    const vis = visible();
+    const n = vis.filter((i) => done[i.url]).length;
+    $('count').textContent = n + ' / ' + vis.length;
+    $('bar').style.width = vis.length ? (n / vis.length * 100) + '%' : '0';
+    const next = vis.find((i) => !done[i.url] && !skipped.has(i.url)) || vis.find((i) => !done[i.url]);
+    $('card').hidden = !next;
+    $('finished').hidden = !!next || !vis.length;
+    if (next) {
+      $('cPlat').textContent = next.p;
+      $('cName').textContent = next.name;
+      $('cNote').textContent = next.note;
+      $('cOpen').href = next.url;
+      $('cOpen').textContent = t('open', { p: next.p });
+      $('cDone').onclick = () => { done[next.url] = Date.now(); store.set('frb-done', done); render(); };
+      $('cSkip').onclick = () => { skipped.add(next.url); render(); };
+      $('cSrc').replaceChildren();
+      if (next.source) { const a = document.createElement('a'); a.href = next.source; a.target = '_blank'; a.rel = 'noopener'; a.textContent = t('source'); $('cSrc').append(a); }
+    }
+    $('all').replaceChildren(...vis.map((i) => {
+      const li = document.createElement('li'); if (done[i.url]) li.className = 'done';
+      const s = document.createElement('span'); s.textContent = (done[i.url] ? '✓ ' : '') + i.name + ' · ' + i.p;
+      const a = document.createElement('a'); a.href = i.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = t('open_short');
+      li.append(s, a); return li;
+    }));
+  }
+
+  $('lang').onchange = (e) => { lang = e.target.value; store.set('frb-lang', lang); applyLang(); render(); };
+  $('country').onchange = (e) => { country = e.target.value; store.set('frb-country', country); load(); };
+  $('reset').onclick = () => { if (confirm(t('reset_q'))) { done = {}; store.set('frb-done', done); render(); } };
+  applyLang();
+  fillCountries();
+  load();
+})();
+</script>
+</body>
+</html>

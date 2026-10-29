@@ -1,0 +1,82 @@
+{
+  "title": "España: lista de partida (Vox)",
+  "lang": "es",
+  "country": "ES",
+  "description": "Vox y sus principales figuras. Fuente de la calificación: Carnegie Europe (sept. 2026), que describe a Vox como partido de extrema derecha de cara a las elecciones generales de 2027. Cuentas oficiales tomadas de Wikidata el 2026-10-28.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Vox",
+      "matchName": false,
+      "aliases": [
+        "@vox_es",
+        "partido Vox"
+      ],
+      "accounts": [
+        "https://x.com/vox_es",
+        "https://www.instagram.com/vox_es/",
+        "https://www.facebook.com/vox.espana",
+        "https://www.youtube.com/channel/UCRvpumrJs0qY1xLzeU0Ss1Q"
+      ],
+      "source": "https://carnegieendowment.org/europe/research/2026/09/how-europes-2027-elections-could-test-eu-governance",
+      "note": "Partido. Elecciones generales previstas en 2027.",
+      "wikidata": "Q15630787"
+    },
+    {
+      "name": "Santiago Abascal",
+      "aliases": [
+        "Abascal",
+        "@Santi_ABASCAL"
+      ],
+      "accounts": [
+        "https://x.com/Santi_ABASCAL",
+        "https://www.instagram.com/santi_abascal/",
+        "https://www.facebook.com/SantiagoAbascalConde"
+      ],
+      "source": "https://carnegieendowment.org/europe/research/2026/09/how-europes-2027-elections-could-test-eu-governance",
+      "note": "Presidente de Vox.",
+      "wikidata": "Q11703587"
+    },
+    {
+      "name": "Ignacio Garriga",
+      "aliases": [
+        "@Igarrigavaz"
+      ],
+      "accounts": [
+        "https://x.com/Igarrigavaz",
+        "https://www.instagram.com/garriga_ignacio/",
+        "https://www.facebook.com/profile.php?id=1312214994"
+      ],
+      "source": "https://carnegieendowment.org/europe/research/2026/09/how-europes-2027-elections-could-test-eu-governance",
+      "note": "Secretario general de Vox.",
+      "wikidata": "Q62585987"
+    },
+    {
+      "name": "Jorge Buxadé",
+      "aliases": [
+        "Buxadé",
+        "@Jorgebuxade"
+      ],
+      "accounts": [
+        "https://x.com/Jorgebuxade"
+      ],
+      "source": "https://carnegieendowment.org/europe/research/2026/09/how-europes-2027-elections-could-test-eu-governance",
+      "note": "Eurodiputado de Vox.",
+      "wikidata": "Q55493801"
+    },
+    {
+      "name": "Rocío Monasterio",
+      "aliases": [
+        "@monasterioR"
+      ],
+      "accounts": [
+        "https://x.com/monasterioR",
+        "https://www.instagram.com/rociomonasteriovox/"
+      ],
+      "source": "https://carnegieendowment.org/europe/research/2026/09/how-europes-2027-elections-could-test-eu-governance",
+      "note": "Figura de Vox en Madrid.",
+      "wikidata": "Q59609771"
+    }
+  ],
+  "domains": []
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Brasil: lista inicial (bolsonarismo)",
+  "lang": "pt",
+  "country": "BR",
+  "description": "Figuras do bolsonarismo. Fonte: RTP (11/09/2025) descreve Jair Bolsonaro como ex-presidente de extrema-direita, condenado pelo STF a 27 anos e 3 meses por tentativa de golpe de Estado. Contas oficiais via Wikidata em 28/10/2026.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Jair Bolsonaro",
+      "aliases": [
+        "@jairbolsonaro"
+      ],
+      "accounts": [
+        "https://x.com/jairbolsonaro",
+        "https://www.instagram.com/jairmessiasbolsonaro/",
+        "https://www.facebook.com/jairmessias.bolsonaro",
+        "https://www.tiktok.com/@bolsonaromessiasjair",
+        "https://www.youtube.com/channel/UC8hGUtfEgvvnp6IaHSAg1OQ"
+      ],
+      "source": "https://www.rtp.pt/noticias/mundo/bolsonaro-condenado-a-27-anos-e-tres-meses-de-prisao-por-golpe-de-estado_n1683088",
+      "note": "Ex-presidente, condenado pelo STF em 2025.",
+      "wikidata": "Q10304982"
+    },
+    {
+      "name": "Flávio Bolsonaro",
+      "aliases": [
+        "@flaviobolsonaro"
+      ],
+      "accounts": [
+        "https://www.instagram.com/flaviobolsonaro/",
+        "https://www.youtube.com/channel/UCl2HptoHv6PjZMQAwTdA--Q"
+      ],
+      "source": "https://www.rtp.pt/noticias/mundo/bolsonaro-condenado-a-27-anos-e-tres-meses-de-prisao-por-golpe-de-estado_n1683088",
+      "note": "Senador, candidato à presidência em 2026.",
+      "wikidata": "Q10283057"
+    },
+    {
+      "name": "Eduardo Bolsonaro",
+      "aliases": [
+        "@BolsonaroSP"
+      ],
+      "accounts": [
+        "https://x.com/BolsonaroSP",
+        "https://www.instagram.com/bolsonarosp/",
+        "https://www.facebook.com/bolsonaro.enb",
+        "https://www.youtube.com/channel/UCkR6xPOHhpjq3wnFchVI4sg"
+      ],
+      "source": "https://www.rtp.pt/noticias/mundo/bolsonaro-condenado-a-27-anos-e-tres-meses-de-prisao-por-golpe-de-estado_n1683088",
+      "note": "Filho de Jair Bolsonaro.",
+      "wikidata": "Q18246320"
+    },
+    {
+      "name": "Nikolas Ferreira",
+      "aliases": [
+        "@nikolas_dm"
+      ],
+      "accounts": [
+        "https://x.com/nikolas_dm",
+        "https://www.instagram.com/nikolasferreiradm/",
+        "https://www.facebook.com/nikolasferreiradm",
+        "https://www.tiktok.com/@nikolasferreiradm",
+        "https://www.youtube.com/channel/UCxI9vN6UbxmBt8VIvUKtJaA"
+      ],
+      "source": "https://www.rtp.pt/noticias/mundo/bolsonaro-condenado-a-27-anos-e-tres-meses-de-prisao-por-golpe-de-estado_n1683088",
+      "note": "Deputado federal (PL).",
+      "wikidata": "Q109937634"
+    }
+  ],
+  "domains": []
+}

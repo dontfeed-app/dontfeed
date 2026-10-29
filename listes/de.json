@@ -1,0 +1,126 @@
+{
+  "title": "Deutschland: Startliste (AfD)",
+  "lang": "de",
+  "country": "DE",
+  "description": "AfD und ihre bekanntesten Figuren. Einstufung: Das Bundesamt für Verfassungsschutz darf die AfD als rechtsextremistischen Verdachtsfall führen (VG Köln, Beschluss vom 26.02.2026, „starker Verdacht“). Offizielle Konten aus Wikidata, Stand 28.10.2026.",
+  "updated": "2026-10-28",
+  "entries": [
+    {
+      "name": "Alternative für Deutschland",
+      "aliases": [
+        "!AfD",
+        "@AfD"
+      ],
+      "accounts": [
+        "https://x.com/AfD",
+        "https://www.instagram.com/afd.bund/",
+        "https://www.facebook.com/alternativefuerde",
+        "https://www.tiktok.com/@afdfraktionimbundestag",
+        "https://www.youtube.com/channel/UCq2rogaxLtQFrYG3X3KYNww"
+      ],
+      "source": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/vg-koeln-13l1109-25-einstufung-afd-gesichert-rechtsextremistisch-2026-02-26",
+      "note": "Partei.",
+      "wikidata": "Q6721203"
+    },
+    {
+      "name": "Alice Weidel",
+      "aliases": [
+        "Weidel",
+        "@Alice_Weidel"
+      ],
+      "accounts": [
+        "https://x.com/Alice_Weidel",
+        "https://www.instagram.com/alice.weidel/",
+        "https://www.facebook.com/aliceweidel",
+        "https://www.tiktok.com/@alice_weidel_afd",
+        "https://www.youtube.com/channel/UCT0wo1uc6G3UTuM_MiacA9g"
+      ],
+      "source": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/vg-koeln-13l1109-25-einstufung-afd-gesichert-rechtsextremistisch-2026-02-26",
+      "note": "Bundessprecherin der AfD.",
+      "wikidata": "Q27975838"
+    },
+    {
+      "name": "Tino Chrupalla",
+      "aliases": [
+        "Chrupalla",
+        "@Tino_Chrupalla"
+      ],
+      "accounts": [
+        "https://x.com/Tino_Chrupalla",
+        "https://www.instagram.com/chrupallatino/",
+        "https://www.facebook.com/TinoAfD",
+        "https://www.tiktok.com/@tino.chrupalla.afd",
+        "https://www.youtube.com/channel/UCwIR8kWUK-xp2Lu_zWsxFdQ"
+      ],
+      "source": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/vg-koeln-13l1109-25-einstufung-afd-gesichert-rechtsextremistisch-2026-02-26",
+      "note": "Bundessprecher der AfD.",
+      "wikidata": "Q40895143"
+    },
+    {
+      "name": "Björn Höcke",
+      "aliases": [
+        "Höcke",
+        "@BjoernHoecke"
+      ],
+      "accounts": [
+        "https://x.com/BjoernHoecke",
+        "https://www.instagram.com/bjoern_hoecke_afd/",
+        "https://www.facebook.com/Bjoern.Hoecke.AfD",
+        "https://www.tiktok.com/@bjoernhoecke",
+        "https://www.youtube.com/channel/UCi1Z940sujXriXiTaxyFpOQ"
+      ],
+      "source": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/vg-koeln-13l1109-25-einstufung-afd-gesichert-rechtsextremistisch-2026-02-26",
+      "note": "Landesvorsitzender der AfD Thüringen.",
+      "wikidata": "Q18176756"
+    },
+    {
+      "name": "Maximilian Krah",
+      "aliases": [
+        "@KrahMax"
+      ],
+      "accounts": [
+        "https://x.com/KrahMax",
+        "https://www.instagram.com/maximilian.krah/",
+        "https://www.facebook.com/krahmax",
+        "https://www.tiktok.com/@maximilian_krah",
+        "https://www.youtube.com/channel/UCQPvjQbhapgOwprAYusL8Tw"
+      ],
+      "source": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/vg-koeln-13l1109-25-einstufung-afd-gesichert-rechtsextremistisch-2026-02-26",
+      "note": "AfD-Abgeordneter.",
+      "wikidata": "Q64073803"
+    },
+    {
+      "name": "Beatrix von Storch",
+      "aliases": [
+        "@Beatrix_vStorch"
+      ],
+      "accounts": [
+        "https://x.com/Beatrix_vStorch",
+        "https://www.instagram.com/beatrix.von.storch/",
+        "https://www.facebook.com/BeatrixVonStorch",
+        "https://www.tiktok.com/@beatrixvonstorchneu",
+        "https://www.youtube.com/channel/UCvXq_RlnDRLatFpiWbc4hyA"
+      ],
+      "source": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/vg-koeln-13l1109-25-einstufung-afd-gesichert-rechtsextremistisch-2026-02-26",
+      "note": "AfD-Abgeordnete.",
+      "wikidata": "Q14924803"
+    },
+    {
+      "name": "Ulrich Siegmund",
+      "aliases": [
+        "@UlrichSiegmund"
+      ],
+      "accounts": [
+        "https://x.com/UlrichSiegmund",
+        "https://www.instagram.com/ulrich_siegmund/",
+        "https://www.facebook.com/profile.php?id=425068607950031",
+        "https://www.tiktok.com/@mutzurwahrheit90",
+        "https://www.youtube.com/channel/UCkDNRaTUFuWBRDr7lDETSkw"
+      ],
+      "source": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/vg-koeln-13l1109-25-einstufung-afd-gesichert-rechtsextremistisch-2026-02-26",
+      "note": "AfD Sachsen-Anhalt.",
+      "wikidata": "Q23565989"
+    }
+  ],
+  "domains": []
+}

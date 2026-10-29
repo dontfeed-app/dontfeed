@@ -1,0 +1,6 @@
+! Title: Liste d'exemple au format texte (personnes fictives)
+# Une ligne par personne : Nom | variante | @compte | https://lien-vers-un-profil
+# Les liens https:// deviennent des comptes à bloquer à la source.
+Jean Exemple | J. Exemple | @jeanexemple | https://x.com/jeanexemple
+Média Fictif | @mediafictif | https://www.tiktok.com/@mediafictif
+domain:media-fictif.example
