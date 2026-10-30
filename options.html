@@ -8,25 +8,30 @@
   <style>
     main { max-width: 960px; margin: 0 auto; padding: 40px 24px 64px; display: flex; flex-direction: column; gap: 28px; }
     header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    .hero { padding: 32px; display: flex; flex-direction: column; gap: 24px; }
-    .hero h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.02em; }
-    .hero p.lead { font-size: 16px; line-height: 1.55; color: var(--text-2); max-width: 680px; }
-    .kicker { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-    .step { display: flex; flex-direction: column; gap: 6px; padding: 16px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); }
-    .step .n { font-family: var(--mono); font-size: 13px; color: var(--accent); }
-    .step b { font-size: 15px; }
-    .step span:last-child { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
-    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-    .stat { padding: 14px 16px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); }
-    .stat b { display: block; font-size: 28px; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-    .stat span { font-size: 13px; color: var(--muted); }
-    @media (max-width: 720px) { .steps { grid-template-columns: minmax(0, 1fr); } .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { padding: 22px; } .hero h1 { font-size: 27px; } }
+    .hero { display: flex; flex-direction: column; gap: 32px; padding: 12px 0 8px; }
+    .hero h1 { font-size: clamp(46px, 7.4vw, 82px); line-height: 0.93; max-width: 900px; }
+    .hero h1::after { content: ""; display: block; width: 84px; height: 9px; background: var(--accent); margin-top: 22px; }
+    .lead-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+    .lead-cols p { font-size: 16.5px; line-height: 1.6; color: var(--text-2); }
+    .rules { list-style: none; margin: 0; padding: 0; border-top: 3px solid var(--text); }
+    .rules li { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .rules .num { font-stretch: 75%; font-weight: 800; font-size: 64px; line-height: 0.82; color: var(--accent); }
+    .rules b { display: block; font-stretch: 80%; font-weight: 800; font-size: 25px; line-height: 1.1; text-transform: uppercase; margin-bottom: 6px; }
+    .rules span { color: var(--text-2); font-size: 15.5px; line-height: 1.55; display: block; max-width: 640px; }
+    .choice { padding: 24px; border: 2px solid var(--text); border-radius: 0; background: var(--panel); }
+    .choice > b { font-stretch: 87%; font-weight: 800; font-size: 20px; }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 3px solid var(--text); }
+    .stat { padding: 14px 16px 6px 0; border-right: 1px solid var(--line); margin-right: 16px; }
+    .stat:last-child { border-right: none; margin-right: 0; }
+    .stat b { display: block; font-stretch: 75%; font-weight: 800; font-size: 50px; line-height: 1; font-variant-numeric: tabular-nums; }
+    .stat span { font-size: 13.5px; color: var(--muted); }
+    @media (max-width: 720px) { .lead-cols { grid-template-columns: minmax(0, 1fr); gap: 14px; } .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .rules li { grid-template-columns: 48px minmax(0, 1fr); } .rules .num { font-size: 46px; } }
     nav.tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
-    nav.tabs button { border: none; border-radius: 0; min-height: 44px; font-size: 15px; color: var(--faint); padding: 0 14px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
-    nav.tabs button[aria-selected="true"] { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+    nav.tabs { border-bottom: 1px solid var(--line); }
+    nav.tabs button { border: none; border-radius: 0; min-height: 46px; font-size: 14px; font-stretch: 87%; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--faint); padding: 0 14px; border-bottom: 3px solid transparent; margin-bottom: -1px; }
+    nav.tabs button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
     section.tab { display: flex; flex-direction: column; gap: 18px; }
-    section.tab h2 { font-size: 22px; }
+    section.tab h2 { font-size: 26px; text-transform: uppercase; font-stretch: 80%; }
     .card-list { padding: 0; overflow: hidden; }
     .person { display: flex; gap: 16px; align-items: center; padding: 18px 20px; border-top: 1px solid var(--line); flex-wrap: wrap; }
     .person:first-child { border-top: none; }
@@ -48,30 +53,31 @@
     <div class="row muted"><span class="dot" id="statusDot"></span><span id="statusText"></span></div>
   </header>
 
-  <section class="panel hero" aria-labelledby="heroTitle">
-    <div class="stack" style="gap: 10px">
-      <span class="kicker" data-i18n="kicker_why"></span>
-      <h1 id="heroTitle" data-i18n="hero_title"></h1>
-      <p class="lead" data-i18n="hero_p1"></p>
-      <p class="lead" data-i18n="hero_p2"></p>
+  <section class="hero" aria-labelledby="heroTitle">
+    <h1 class="display" id="heroTitle" data-i18n="hero_title"></h1>
+    <div class="lead-cols">
+      <p data-i18n="hero_p1"></p>
+      <p data-i18n="hero_p2"></p>
     </div>
-    <span class="kicker" data-i18n="kicker_rules"></span>
-    <div class="steps">
-      <div class="step"><span class="n">01</span><b data-i18n="r1_t"></b><span data-i18n="r1_d"></span></div>
-      <div class="step"><span class="n">02</span><b data-i18n="r2_t"></b><span data-i18n="r2_d"></span></div>
-      <div class="step"><span class="n">03</span><b data-i18n="r3_t"></b><span data-i18n="r3_d"></span></div>
+    <div class="stack" style="gap: 12px">
+      <span class="label" data-i18n="kicker_rules"></span>
+      <ol class="rules">
+        <li><span class="num">1</span><div><b data-i18n="r1_t"></b><span data-i18n="r1_d"></span></div></li>
+        <li><span class="num">2</span><div><b data-i18n="r2_t"></b><span data-i18n="r2_d"></span></div></li>
+        <li><span class="num">3</span><div><b data-i18n="r3_t"></b><span data-i18n="r3_d"></span></div></li>
+      </ol>
     </div>
-    <div class="stack" id="choiceRow" style="gap: 10px">
-      <b style="font-size: 15px" data-i18n="choice_q"></b>
+    <div class="stack choice" id="choiceRow" style="gap: 12px">
+      <b data-i18n="choice_q"></b>
       <label class="field" style="max-width: 320px"><span data-i18n="choice_country"></span><select id="choiceCountry"></select></label>
       <div class="row">
         <button class="primary" id="choiceBlur" type="button" data-i18n="choice_blur"></button>
-        <button class="primary" id="choiceSource" type="button" style="background: transparent; color: var(--text); border-color: var(--accent)" data-i18n="choice_source"></button>
+        <button class="primary" id="choiceSource" type="button" style="background: transparent; color: var(--text); border-color: var(--text)" data-i18n="choice_source"></button>
       </div>
       <span class="muted" data-i18n="choice_note"></span>
     </div>
-    <div class="stack" id="statsBox" style="gap: 8px" hidden>
-      <span class="kicker" data-i18n="stats_title"></span>
+    <div class="stack" id="statsBox" style="gap: 10px" hidden>
+      <span class="label" data-i18n="stats_title"></span>
       <div class="stats">
         <div class="stat"><b id="stToday">0</b><span data-i18n="stats_today"></span></div>
         <div class="stat"><b id="stWeek">0</b><span data-i18n="stats_week"></span></div>
@@ -99,7 +105,7 @@
         <p class="muted" data-i18n="src_desc"></p>
       </div>
       <div class="stack" style="gap: 6px; min-width: 220px">
-        <div class="row" style="justify-content: space-between; font-size: 13px"><span class="muted" data-i18n="progress"></span><span class="mono" id="srcStats">0 / 0</span></div>
+        <div class="row" style="justify-content: space-between; font-size: 13px"><span class="muted" data-i18n="progress"></span><span id="srcStats" style="font-variant-numeric: tabular-nums; font-weight: 700">0 / 0</span></div>
         <div class="progress"><div id="srcBar"></div></div>
       </div>
     </div>
