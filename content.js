@@ -17,6 +17,7 @@
       'ytd-reel-video-renderer', // lecteur Shorts plein écran
       'ytm-compact-video-renderer', 'ytm-rich-item-renderer',
       'grid-shelf-view-model', 'ytd-shelf-renderer', 'ytd-reel-shelf-renderer', // étagères : testées sur leur seul titre
+      'yt-page-header-renderer', 'ytd-c4-tabbed-header-renderer', 'ytd-channel-video-player-renderer', // page d'une chaîne
     ]],
     [/(^|\.)(x|twitter)\.com$/, ['article[data-testid="tweet"]', '[data-testid="UserCell"]', '[data-testid="trend"]']],
     [/(^|\.)facebook\.com$/, ['div[role="article"]']],
@@ -76,7 +77,7 @@
       if (big) {
         el.classList.add('frb-veil');
         if (cs.position === 'static') el.classList.add('frb-rel');
-        el.setAttribute('data-frb-label', globalThis.I18N ? I18N.t('masked', { n: term }) : term);
+        el.setAttribute('data-frb-label', term);
       } else {
         el.classList.add('frb-blur');
       }
@@ -189,8 +190,26 @@
   const SHELF_SEL = 'grid-shelf-view-model, ytd-shelf-renderer, ytd-reel-shelf-renderer, .kp-wholepage-osrp, .kp-wholepage, #rhs';
   const SHELF_TITLE_SEL = 'yt-section-header-view-model, .grid-subheader, #title-container, #title, [data-attrid="title"], [data-attrid="description"], [data-attrid="subtitle"]';
 
+  // Page d'une chaîne YouTube bloquée : toute la page est floutée (bannière, vidéo mise en avant, onglets),
+  // même les vidéos dont le titre ne cite personne. Repérée par l'adresse canonique de la chaîne,
+  // ou par l'en-tête de la page quand il cite un nom de la liste.
+  const IS_YT = /(^|\.)youtube\.com$/.test(host);
+  const YT_HEADER = 'yt-page-header-renderer, ytd-c4-tabbed-header-renderer';
+  function channelTerm() {
+    if (!IS_YT || !/^\/(@|channel\/|c\/|user\/)/.test(location.pathname)) return null;
+    const h = document.querySelector('ytd-browse:not([hidden]) ' + YT_HEADER.split(', ').join(', ytd-browse:not([hidden]) '));
+    const ht = h && matcher && matcher(joinedText(h).slice(0, 300));
+    if (ht) return names.get(ht) || ht;
+    if (location.pathname.startsWith('/channel/')) return accounts.get(accountKey(location.href, location.href)) || null;
+    return null;
+  }
+
   // Teste un élément ; generic = remonter à la carte englobante
   function check(el, generic) {
+    if (IS_YT && !generic && el.closest('ytd-browse')) {
+      const ct = channelTerm();
+      if (ct && !isRevealed(el)) { seen.set(el, 'ch|' + ct); targetOf.set(el, el); mark(el, ct); return; }
+    }
     if (revealed.has(el)) {
       // YouTube recycle ses éléments : une révélation ne vaut que pour le contenu révélé
       if (revealed.get(el) === fingerprint(el)) return;
