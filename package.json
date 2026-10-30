@@ -1,5 +1,6 @@
 {
   "name": "dontfeed",
+  "license": "MIT",
   "version": "0.9.0",
   "private": true,
   "scripts": { "test": "node test/core.test.js" }
