@@ -158,3 +158,7 @@ Contact : far_right_blocker@proton.me
 ## Publier
 
 Voir [STORE.md](STORE.md) (fiche, justification des permissions, étapes) et [PRIVACY.md](PRIVACY.md). `./scripts/build.sh` crée le zip à envoyer.
+
+## Licence
+
+MIT, voir [LICENSE](LICENSE).

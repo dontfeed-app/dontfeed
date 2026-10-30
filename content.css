@@ -46,11 +46,11 @@
   width: max-content !important;
   height: auto !important;
   padding: 0 !important;
-  min-width: 30px !important;
-  min-height: 30px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M18 48H40L68 24V104L40 80H18Z' fill='%23ffffff'/%3E%3Cpath d='M84 48L112 80M112 48L84 80' stroke='%23FF3B3B' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
-  background-size: 18px 18px !important;
+  background-size: 24px 24px !important;
   background-position: center !important;
   box-sizing: border-box !important;
   border-radius: 999px !important;
@@ -59,7 +59,7 @@
   color: #ecebe6 !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) !important;
   text-align: center !important;
-  font: 500 12px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important;
+  font: 500 13px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
@@ -71,8 +71,8 @@
 /* Au survol, la pastille s'ouvre et donne le nom de la personne */
 .frb-veil:hover::after {
   content: attr(data-frb-label) !important;
-  padding: 7px 12px 7px 32px !important;
-  background-position: 11px 50% !important;
+  padding: 9px 14px 9px 42px !important;
+  background-position: 12px 50% !important;
 }
 
 /* Pas d'aperçu vidéo au survol d'un contenu flouté (YouTube affiche l'aperçu dans un calque à part) */
