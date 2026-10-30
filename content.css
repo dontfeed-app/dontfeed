@@ -32,7 +32,7 @@
 }
 /* Pastille centrée, lisible sur fond clair comme sombre */
 .frb-veil::after {
-  content: attr(data-frb-label) !important;
+  content: "" !important;
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
@@ -45,11 +45,13 @@
   max-height: calc(100% - 8px) !important;
   width: max-content !important;
   height: auto !important;
-  padding: 6px 12px 6px 30px !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M64 104C64 104 26 84 26 58C26 46 35 38 46 38C54 38 60 43 64 49C68 43 74 38 82 38C93 38 102 46 102 58C102 84 64 104 64 104Z' fill='%23ffffff'/%3E%3Cpath d='M22 22L106 106' stroke='%23111214' stroke-width='34' stroke-linecap='round'/%3E%3Cpath d='M22 22L106 106' stroke='%23FF2D2D' stroke-width='18' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  padding: 0 !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M18 48H40L68 24V104L40 80H18Z' fill='%23ffffff'/%3E%3Cpath d='M84 48L112 80M112 48L84 80' stroke='%23FF3B3B' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
-  background-size: 14px 14px !important;
-  background-position: 11px 50% !important;
+  background-size: 18px 18px !important;
+  background-position: center !important;
   box-sizing: border-box !important;
   border-radius: 999px !important;
   border: 0 !important;
@@ -64,6 +66,13 @@
   pointer-events: none !important;
   opacity: 1 !important;
   filter: none !important;
+}
+
+/* Au survol, la pastille s'ouvre et donne le nom de la personne */
+.frb-veil:hover::after {
+  content: attr(data-frb-label) !important;
+  padding: 7px 12px 7px 32px !important;
+  background-position: 11px 50% !important;
 }
 
 /* Pas d'aperçu vidéo au survol d'un contenu flouté (YouTube affiche l'aperçu dans un calque à part) */
