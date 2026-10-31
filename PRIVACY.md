@@ -1,6 +1,6 @@
 # Politique de confidentialité - Don't Feed
 
-Dernière mise à jour : 28 octobre 2026
+Dernière mise à jour : 31 octobre 2026
 
 **Don't Feed ne collecte, ne stocke sur un serveur, ne vend ni ne transmet aucune donnée personnelle.**
 
@@ -9,7 +9,8 @@ Dernière mise à jour : 28 octobre 2026
 Tout est enregistré localement dans ton navigateur (stockage de l'extension) :
 - tes listes (noms, variantes, liens de profils, sites bloqués, exceptions) ;
 - tes réglages (mode flou ou masquage, sites en pause) ;
-- les cases « bloqué » cochées dans l'onglet « Bloquer à la source ».
+- les cases « bloqué » cochées dans l'onglet « Bloquer à la source » ;
+- le compteur de contenus masqués (un nombre par jour), affiché dans la popup. Il ne quitte jamais ton appareil.
 
 Le contenu des pages que tu visites est analysé **dans ton navigateur uniquement**, pour masquer les blocs qui citent un nom de tes listes. Rien n'en sort.
 
@@ -17,7 +18,7 @@ Le contenu des pages que tu visites est analysé **dans ton navigateur uniquemen
 
 L'extension télécharge les listes auxquelles **tu** t'abonnes (dont la liste de départ, hébergée sur GitHub), au moment de l'abonnement puis toutes les 12 heures. Ces requêtes ne contiennent aucune information sur toi au-delà de ce que tout téléchargement révèle (adresse IP, navigateur) à l'hébergeur de la liste.
 
-Pas de statistiques, pas de traceurs, pas de compte utilisateur, pas de publicité.
+Pas de statistiques envoyées, pas de traceurs, pas de compte utilisateur, pas de publicité.
 
 ## Permissions demandées
 
