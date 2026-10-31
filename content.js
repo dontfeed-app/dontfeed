@@ -17,7 +17,7 @@
       'ytd-reel-video-renderer', // lecteur Shorts plein écran
       'ytm-compact-video-renderer', 'ytm-rich-item-renderer',
       'grid-shelf-view-model', 'ytd-shelf-renderer', 'ytd-reel-shelf-renderer', // étagères : testées sur leur seul titre
-      'yt-page-header-renderer', 'ytd-c4-tabbed-header-renderer', 'ytd-channel-video-player-renderer', // page d'une chaîne
+      'yt-page-header-renderer', 'ytd-c4-tabbed-header-renderer', 'ytd-channel-video-player-renderer', 'yt-image-banner-view-model', // page d'une chaîne
     ]],
     [/(^|\.)(x|twitter)\.com$/, ['article[data-testid="tweet"]', '[data-testid="UserCell"]', '[data-testid="trend"]']],
     [/(^|\.)facebook\.com$/, ['div[role="article"]']],
