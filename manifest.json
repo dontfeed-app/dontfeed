@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Don't Feed: Far right content blocker",
   "short_name": "Don't Feed",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Floute les contenus des figures d'extrême droite sur tous les sites et t'aide à bloquer leurs comptes. Listes sourcées par pays.",
   "permissions": [
     "storage",
