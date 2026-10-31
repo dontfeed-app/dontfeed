@@ -23,6 +23,8 @@
   --ok-line: #2e5a3c;
   --danger: #ff8a80;
   --mono: ui-monospace, "IBM Plex Mono", Menlo, Consolas, monospace;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --grain: 0.06;
   --font: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: dark;
 }
@@ -49,10 +51,11 @@
     --ok-soft: #e6f4e7;
     --ok-line: #a9d3ac;
     --danger: #b3261e;
+    --grain: 0.09;
     color-scheme: light;
   }
 }
-/* Archivo (SIL Open Font License, fonts/OFL.txt), embarquée : aucune requête externe */
+/* Archivo (SIL Open Font License, fonts/OFL-Archivo.txt), embarquée : aucune requête externe */
 @font-face {
   font-family: "Archivo";
   src: url("fonts/archivo-latin-standard-normal.woff2") format("woff2");
@@ -65,7 +68,26 @@
   font-weight: 100 900; font-stretch: 62% 125%; font-display: swap;
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+/* Source Serif 4 (SIL Open Font License, fonts/OFL-SourceSerif4.txt) pour les textes longs */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 900; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-ext-wght-normal.woff2") format("woff2");
+  font-weight: 200 900; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 * { box-sizing: border-box; }
+/* Grain de papier, très léger, pour éviter l'aspect « écran lisse » */
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: var(--grain);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.serif { font-family: var(--serif); }
 [hidden] { display: none !important; }
 body {
   margin: 0;

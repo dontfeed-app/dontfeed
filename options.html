@@ -9,15 +9,23 @@
     main { max-width: 960px; margin: 0 auto; padding: 40px 24px 64px; display: flex; flex-direction: column; gap: 28px; }
     header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .hero { display: flex; flex-direction: column; gap: 32px; padding: 12px 0 8px; }
-    .hero h1 { font-size: clamp(46px, 7.4vw, 82px); line-height: 0.93; max-width: 900px; }
-    .hero h1::after { content: ""; display: block; width: 84px; height: 9px; background: var(--accent); margin-top: 22px; }
+    .hero h1 { font-size: clamp(46px, 7.4vw, 86px); line-height: 0.93; max-width: calc(100% - 260px); }
+    @media (max-width: 860px) { .hero h1 { max-width: none; } }
+    .hero { position: relative; }
+    .scribble { display: block; width: min(320px, 60%); height: auto; margin-top: 10px; color: var(--accent); }
+    .stamp { position: absolute; top: 4px; right: 0; transform: rotate(-7deg); border: 3px solid var(--accent); color: var(--accent); padding: 8px 14px 9px; text-align: center; border-radius: 4px; line-height: 1; mix-blend-mode: normal; opacity: 0.92; }
+    .stamp b { display: block; font-stretch: 75%; font-weight: 800; font-size: 24px; letter-spacing: 0.02em; text-transform: uppercase; }
+    .stamp small { display: block; font-family: var(--serif); font-style: italic; font-size: 13px; margin-top: 5px; }
+    footer.foot { border-top: 3px solid var(--text); padding-top: 14px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--serif); font-size: 15px; color: var(--text-2); }
+    @media (max-width: 860px) { .stamp { position: static; align-self: flex-start; transform: rotate(-4deg); } }
     .lead-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
-    .lead-cols p { font-size: 16.5px; line-height: 1.6; color: var(--text-2); }
+    .lead-cols p { font-family: var(--serif); font-size: 18px; line-height: 1.55; color: var(--text-2); }
+    .lead-cols p:first-child { font-size: 21px; line-height: 1.45; color: var(--text); }
     .rules { list-style: none; margin: 0; padding: 0; border-top: 3px solid var(--text); }
     .rules li { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--line); }
     .rules .num { font-stretch: 75%; font-weight: 800; font-size: 64px; line-height: 0.82; color: var(--accent); }
     .rules b { display: block; font-stretch: 80%; font-weight: 800; font-size: 25px; line-height: 1.1; text-transform: uppercase; margin-bottom: 6px; }
-    .rules span { color: var(--text-2); font-size: 15.5px; line-height: 1.55; display: block; max-width: 640px; }
+    .rules span { font-family: var(--serif); color: var(--text-2); font-size: 17px; line-height: 1.5; display: block; max-width: 640px; }
     .choice { padding: 24px; border: 2px solid var(--text); border-radius: 0; background: var(--panel); }
     .choice > b { font-stretch: 87%; font-weight: 800; font-size: 20px; }
     .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 3px solid var(--text); }
@@ -54,7 +62,11 @@
   </header>
 
   <section class="hero" aria-labelledby="heroTitle">
-    <h1 class="display" id="heroTitle" data-i18n="hero_title"></h1>
+    <div class="stamp"><b>Senta o dedo<br>no block</b><small data-i18n="stamp_sub"></small></div>
+    <div>
+      <h1 class="display" id="heroTitle" data-i18n="hero_title"></h1>
+      <svg class="scribble" viewBox="0 0 320 26" aria-hidden="true"><path d="M4 16 C 52 7, 104 9, 158 11 S 262 15, 316 6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"></path><path d="M30 22 C 96 15, 176 18, 250 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.7"></path></svg>
+    </div>
     <div class="lead-cols">
       <p data-i18n="hero_p1"></p>
       <p data-i18n="hero_p2"></p>
@@ -204,6 +216,10 @@
       <ul class="list" id="pausedList"></ul>
     </div>
   </section>
+  <footer class="foot">
+    <span data-i18n="footer_line"></span>
+    <a href="https://github.com/dontfeed-app/dontfeed" target="_blank" rel="noopener" data-i18n="footer_code"></a>
+  </footer>
 </main>
 <script src="lib/core.js"></script>
 <script src="lib/i18n.js"></script>
