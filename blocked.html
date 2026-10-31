@@ -7,15 +7,20 @@
   <link rel="stylesheet" href="ui.css">
   <style>
     body { display: grid; place-items: center; min-height: 100vh; padding: 24px; }
-    .box { max-width: 440px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
-    h1 { font-size: 28px; letter-spacing: -0.02em; }
+    .box { max-width: 560px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+    h1 { font-size: clamp(38px, 6vw, 58px); line-height: 0.95; }
+    .scribble { width: 220px; height: auto; color: var(--accent); margin-top: -6px; }
+    .box p { font-family: var(--serif); font-size: 19px; line-height: 1.5; }
+    .box p.muted { font-size: 16px; }
+    #domain { font-family: var(--font); font-stretch: 87%; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; border: 2px solid var(--accent); color: var(--accent); padding: 4px 10px; transform: rotate(-3deg); }
   </style>
 </head>
 <body>
   <div class="box">
     <img src="icons/icon.svg" width="56" height="56" alt="" style="border-radius:13px;box-shadow:0 0 0 1px rgba(127,127,127,.35)">
-    <span class="mono muted" id="domain"></span>
-    <h1 data-i18n="blocked_h"></h1>
+    <span id="domain"></span>
+    <h1 class="display" data-i18n="blocked_h"></h1>
+    <svg class="scribble" viewBox="0 0 320 26" aria-hidden="true"><path d="M4 16 C 52 7, 104 9, 158 11 S 262 15, 316 6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"></path></svg>
     <p style="color: var(--text-2)" data-i18n="blocked_p"></p>
     <p class="muted" data-i18n="blocked_tip"></p>
     <div class="row" style="justify-content: center; margin-top: 8px">
