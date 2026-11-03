@@ -64,6 +64,6 @@ s = F.addHits(s, 5, new Date('2026-10-20T12:00:00'));
 const sum = F.summarize(s, new Date('2026-10-28T20:00:00'));
 assert.deepEqual([sum.today, sum.week, sum.month, sum.total], [5, 5, 10, 10]);
 assert.equal(F.defaultCountry('es-ES'), 'ES'); assert.equal(F.defaultCountry('pt-BR'), 'BR'); assert.equal(F.defaultCountry('en-US'), 'US');
-for (const k of ['es', 'de', 'br', 'it', 'pl', 'us']) { const L = F.parseList(fs.readFileSync(__dirname + '/../listes/' + k + '.json', 'utf8')); for (const e of L.entries) assert.ok(e.source, k + ' ' + e.name); }
+for (const k of ['es', 'de', 'br', 'it', 'pl', 'us', 'bollore']) { const L = F.parseList(fs.readFileSync(__dirname + '/../listes/' + k + '.json', 'utf8')); for (const e of L.entries) assert.ok(e.source, k + ' ' + e.name); }
 const I = require('../lib/i18n.js'); I.setLang('de'); assert.equal(I.t('masked', { n: 'X' }), 'Ausgeblendet: X');
 console.log('stats/i18n OK');

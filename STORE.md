@@ -30,6 +30,9 @@ Les vidéos, posts, commentaires et articles qui citent une personne de tes list
 **Bloquer à la source**
 Masquer dans ton navigateur ne change rien pour l'algorithme. Bloquer le compte sur la plateforme, si. Don't Feed liste les comptes officiels de chaque personne, avec un lien direct et une case à cocher, pour les bloquer un par un sur chaque réseau.
 
+**Médias Bolloré**
+La liste France inclut CNews, Europe 1 et le JDD. Une liste à part bloque tous les médias du groupe Bolloré (Canal+, magazines Prisma Media...).
+
 **Listes partagées**
 Une liste de départ sourcée est proposée en un clic. Tu peux aussi t'abonner à d'autres listes (une simple adresse), créer la tienne, l'exporter et la partager. Ajoute un nom en le sélectionnant sur n'importe quelle page, clic droit, « Bloquer ».
 

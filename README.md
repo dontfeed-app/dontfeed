@@ -129,6 +129,12 @@ L'interface est traduite en français, anglais, espagnol, portugais, allemand et
 
 Les listes étrangères sont volontairement courtes : un parti et ses figures nationales, chacune avec une source qui emploie le terme « extrême droite » (ou une décision officielle). Elles gagneraient à être relues par des gens du pays : les pull requests sont les bienvenues.
 
+## Médias du groupe Bolloré
+
+La liste de départ France inclut **CNews, Europe 1 et le Journal du dimanche (JDNews compris)**, les médias d'opinion du groupe de Vincent Bolloré : CNews a été mise en demeure par l'Arcom le 12 juin 2026 pour manque de pluralisme ([La Gazette, juin 2026](https://www.lagazettefrance.fr/article/a-un-an-de-la-presidentielle-cnews-sommee-par-l-arcom-d-elargir-les-points-de-vue)), et le JDD est passé « du centre à l'extrême droite » ([Index on Censorship, oct. 2025](https://www.indexoncensorship.org/2025/10/how-a-billionaire-mogul-pushed-frances-media-to-the-right/)).
+
+Une liste à part, [`bollore.json`](listes/bollore.json) (« Médias du groupe Bolloré » dans Abonnements), va plus loin : elle bloque aussi les sites de Canal+ et des magazines Prisma Media (Capital, Gala, Voici, Géo, Télé-Loisirs, Femme Actuelle...). Paris Match n'y est pas : le magazine appartient à LVMH depuis octobre 2024.
+
 ## Compteur
 
 L'extension compte les contenus masqués (aujourd'hui, 7 jours, 30 jours, au total), affichés dans la popup et en haut de la page de l'extension. Le compteur est stocké uniquement sur l'appareil : rien n'est envoyé.

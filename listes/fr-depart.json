@@ -1,7 +1,7 @@
 {
   "title": "Liste de départ FR (personnalités et partis)",
   "description": "Liste de test : dirigeants, élus et partis français classés à l'extrême droite par une source publique (circulaire de l'Intérieur du 2 février 2026 pour le RN et l'UDR, presse pour Reconquête). Appartenance au parti et comptes officiels relevés sur Wikidata le 2026-10-28. Pas de particuliers.",
-  "updated": "2026-10-28",
+  "updated": "2026-11-03",
   "entries": [
     {
       "name": "Rassemblement national",
@@ -299,6 +299,43 @@
       "source": "https://www.slate.fr/story/256104/reconquete-elections-europeennes-zemmour-marechal-echecs-tensions-extreme-droite",
       "wikidata": "Q82637284",
       "note": "Membre de Reconquête d'après Wikidata (consulté le 2026-10-28)."
+    },
+    {
+      "name": "CNews",
+      "aliases": [
+        "@CNEWS"
+      ],
+      "accounts": [
+        "https://x.com/CNEWS",
+        "https://www.youtube.com/@CNEWSofficiel"
+      ],
+      "source": "https://www.lagazettefrance.fr/article/a-un-an-de-la-presidentielle-cnews-sommee-par-l-arcom-d-elargir-les-points-de-vue",
+      "note": "Chaîne d'info du groupe Bolloré. Mise en demeure par l'Arcom le 12 juin 2026 pour manque de pluralisme (« prédominance d'un même cadre d'interprétation de l'actualité »)."
+    },
+    {
+      "name": "Europe 1",
+      "aliases": [
+        "@Europe1"
+      ],
+      "accounts": [
+        "https://x.com/Europe1"
+      ],
+      "source": "https://www.indexoncensorship.org/2025/10/how-a-billionaire-mogul-pushed-frances-media-to-the-right/",
+      "note": "Radio du groupe Bolloré. Les médias du groupe sont décrits comme soutenant directement l'idéologie de l'extrême droite (Index on Censorship, octobre 2025)."
+    },
+    {
+      "name": "Le Journal du dimanche",
+      "aliases": [
+        "Journal du dimanche",
+        "!JDD",
+        "JDNews",
+        "@leJDD"
+      ],
+      "accounts": [
+        "https://x.com/leJDD"
+      ],
+      "source": "https://www.indexoncensorship.org/2025/10/how-a-billionaire-mogul-pushed-frances-media-to-the-right/",
+      "note": "Hebdomadaire du groupe Bolloré (et son magazine JDNews), dont la ligne éditoriale est passée « du centre à l'extrême droite » (Index on Censorship, octobre 2025)."
     }
   ],
   "domains": []

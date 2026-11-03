@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const { DEFAULTS, EMPTY_PERSONAL, STARTER_LISTS, defaultCountry, parseList, collect, cleanDomain, cleanEntry, summarize } = globalThis.FRB;
+  const { DEFAULTS, EMPTY_PERSONAL, STARTER_LISTS, EXTRA_LISTS, defaultCountry, parseList, collect, cleanDomain, cleanEntry, summarize } = globalThis.FRB;
   const { t } = globalThis.I18N;
   const $ = (id) => document.getElementById(id);
   const store = chrome.storage.local;
@@ -99,11 +99,11 @@
   function renderCountries() {
     const box = $('countryList');
     box.replaceChildren();
-    for (const c of Object.keys(STARTER_LISTS)) {
-      const L = STARTER_LISTS[c];
+    const all = [...Object.keys(STARTER_LISTS).map((c) => [STARTER_LISTS[c], countryLabel(c)]), ...Object.values(EXTRA_LISTS).map((L) => [L, L.flag + ' ' + L.label])];
+    for (const [L, label] of all) {
       const sub = state.subscriptions.find((s) => s.url === L.url);
       box.append(el('div', { class: 'country' },
-        el('div', { class: 'stack', style: 'gap: 2px' }, el('b', {}, countryLabel(c)), sub ? el('span', { class: 'faint' }, (sub.title && sub.title !== sub.url ? sub.title : '')) : null),
+        el('div', { class: 'stack', style: 'gap: 2px' }, el('b', {}, label), sub ? el('span', { class: 'faint' }, (sub.title && sub.title !== sub.url ? sub.title : '')) : null),
         sub
           ? el('span', { class: 'muted' }, t('subscribed'))
           : el('button', { type: 'button', onclick: async (e) => { e.target.disabled = true; await subscribe(L.url); } }, t('subscribe'))));
