@@ -91,11 +91,9 @@
     if (err) $('starterInfo').textContent = t('starter_err', { e: err.error });
     else if (subs.length) {
       const names = subs.map((s) => { const c = Object.keys(STARTER_LISTS).find((k) => STARTER_LISTS[k].url === s.url); return countryLabel(c) + ' (' + (s.entries || []).length + ')'; });
-      $('starterInfo').textContent = t('starter_info', { lists: names.join(', ') }) + (state.settings.showSource ? '' : ' ' + t('blur_only'));
-    } else $('starterInfo').textContent = state.settings.showSource ? '' : t('blur_only');
-    const srcTab = tabs.find((b) => b.dataset.tab === 'source');
-    srcTab.hidden = !state.settings.showSource;
-    if (!state.settings.showSource && srcTab.getAttribute('aria-selected') === 'true') showTab('perso');
+      $('starterInfo').textContent = t('starter_info', { lists: names.join(', ') });
+    } else $('starterInfo').textContent = '';
+    // L'onglet « Bloquer à la source » reste toujours visible : le choix du départ ne fait que choisir l'onglet ouvert
   }
 
   function renderCountries() {
@@ -284,12 +282,10 @@
 
   // --- Réglages ---
   $('enabled').onchange = async (e) => { state.settings.enabled = e.target.checked; await saveSettings(); };
-  $('showSource').onchange = async (e) => { state.settings.showSource = e.target.checked; state.settings.choiceMade = true; await saveSettings(); };
   for (const r of document.querySelectorAll('input[name="mode"]')) r.onchange = async () => { state.settings.mode = r.value; await saveSettings(); };
   $('langSel').onchange = async (e) => { state.settings.lang = e.target.value || null; await saveSettings(); };
   function renderSettings() {
     $('enabled').checked = state.settings.enabled;
-    $('showSource').checked = state.settings.showSource;
     $('statusDot').classList.toggle('off', !state.settings.enabled);
     $('statusText').textContent = state.settings.enabled ? t('status_on') : t('status_off');
     for (const r of document.querySelectorAll('input[name="mode"]')) r.checked = r.value === state.settings.mode;

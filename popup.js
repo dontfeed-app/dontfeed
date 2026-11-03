@@ -27,7 +27,6 @@
     $('enabled').checked = settings.enabled;
     $('paused').checked = !!host && isPaused(host, settings.pausedSites);
     for (const b of document.querySelectorAll('.seg button')) b.setAttribute('aria-pressed', String(b.dataset.mode === settings.mode));
-    $('source').hidden = !settings.showSource;
     const s = summarize(st.stats);
     $('avoided').textContent = s.total ? t('avoided_line', { t: s.today.toLocaleString(I18N.lang), w: s.week.toLocaleString(I18N.lang), a: s.total.toLocaleString(I18N.lang) }) : '';
     const done = st.doneAccounts || {};

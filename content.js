@@ -73,7 +73,8 @@
       el.classList.add('frb-hide');
     } else {
       const cs = getComputedStyle(el);
-      const big = cs.display !== 'inline' && cs.display !== 'contents' && el.offsetHeight >= 48 && el.children.length > 0;
+      // Un bloc de site (post, vidéo) est toujours voilé, même si sa hauteur n'est pas encore calculée (Instagram)
+      const big = cs.display !== 'inline' && cs.display !== 'contents' && el.children.length > 0 && (el.offsetHeight >= 48 || (SITE_SEL && el.matches(SITE_SEL)));
       if (big) {
         el.classList.add('frb-veil');
         if (cs.position === 'static') el.classList.add('frb-rel');
