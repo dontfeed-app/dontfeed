@@ -146,7 +146,7 @@ async function updateDomainRules() {
         redirect: { regexSubstitution: chrome.runtime.getURL('blocked.html') + '?d=\\1' },
       },
       condition: {
-        regexFilter: '^https?://(?:www\\.)?([^/?#:]+)',
+        regexFilter: '^https?://(?:www\\.)?([^/?#:]+).*',
         requestDomains: domains,
         resourceTypes: ['main_frame'],
       },
