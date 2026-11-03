@@ -1,5 +1,7 @@
 # Don't Feed : Far right content blocker
 
+**[Installer sur Firefox](https://addons.mozilla.org/firefox/addon/don-t-feed-far-right-content-blocker/)** · Chrome : bientôt · [Version téléphone](https://dontfeed-app.github.io/dontfeed/mobile/)
+
 Extension Chrome et Firefox qui masque, sur tous les sites, les contenus qui citent les personnalités, comptes et médias de tes listes de blocage. Une sorte d'uBlock Origin, mais pour les personnes plutôt que pour les pubs.
 
 Inspirée du mouvement brésilien « Senta o dedo no block », qui part d'un constat simple : les algorithmes mettent en avant ce qui fait réagir, sans distinguer le soutien de la critique.
