@@ -21,7 +21,7 @@
     ]],
     [/(^|\.)(x|twitter)\.com$/, ['article[data-testid="tweet"]', '[data-testid="UserCell"]', '[data-testid="trend"]']],
     [/(^|\.)facebook\.com$/, ['div[role="article"]']],
-    [/(^|\.)instagram\.com$/, ['article', 'ul > div[role="button"]']],
+    [/(^|\.)instagram\.com$/, ['article', 'ul > div[role="button"]', 'a[href*="/p/"]', 'a[href*="/reel/"]']], // miniatures : liens /compte/p/... reconnus
     [/(^|\.)reddit\.com$/, ['shreddit-post', 'shreddit-comment', 'article']],
     [/(^|\.)tiktok\.com$/, ['[data-e2e="recommend-list-item-container"]', '[data-e2e="search_top-item"]', '[data-e2e="comment-level-1"]', '[data-e2e="search-user-container"]']],
     [/(^|\.)linkedin\.com$/, ['.feed-shared-update-v2', '.comments-comment-item', '.comments-comment-entity']],
