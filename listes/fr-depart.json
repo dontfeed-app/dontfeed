@@ -302,41 +302,39 @@
     },
     {
       "name": "CNews",
-      "aliases": [
-        "@CNEWS"
-      ],
+      "aliases": [],
       "accounts": [
         "https://x.com/CNEWS",
         "https://www.youtube.com/@CNEWSofficiel"
       ],
       "source": "https://www.lagazettefrance.fr/article/a-un-an-de-la-presidentielle-cnews-sommee-par-l-arcom-d-elargir-les-points-de-vue",
-      "note": "Chaîne d'info du groupe Bolloré. Mise en demeure par l'Arcom le 12 juin 2026 pour manque de pluralisme (« prédominance d'un même cadre d'interprétation de l'actualité »)."
+      "note": "Chaîne d'info du groupe Bolloré. Mise en demeure par l'Arcom le 12 juin 2026 pour manque de pluralisme (« prédominance d'un même cadre d'interprétation de l'actualité »). Flouté d'après ce qu'il publie (comptes, vidéos, liens vers son site), pas quand quelqu'un le cite.",
+      "matchName": false
     },
     {
       "name": "Europe 1",
-      "aliases": [
-        "@Europe1"
-      ],
+      "aliases": [],
       "accounts": [
         "https://x.com/Europe1"
       ],
       "source": "https://www.indexoncensorship.org/2025/10/how-a-billionaire-mogul-pushed-frances-media-to-the-right/",
-      "note": "Radio du groupe Bolloré. Les médias du groupe sont décrits comme soutenant directement l'idéologie de l'extrême droite (Index on Censorship, octobre 2025)."
+      "note": "Radio du groupe Bolloré. Les médias du groupe sont décrits comme soutenant directement l'idéologie de l'extrême droite (Index on Censorship, octobre 2025). Flouté d'après ce qu'il publie (comptes, vidéos, liens vers son site), pas quand quelqu'un le cite.",
+      "matchName": false
     },
     {
       "name": "Le Journal du dimanche",
-      "aliases": [
-        "Journal du dimanche",
-        "!JDD",
-        "JDNews",
-        "@leJDD"
-      ],
+      "aliases": [],
       "accounts": [
         "https://x.com/leJDD"
       ],
       "source": "https://www.indexoncensorship.org/2025/10/how-a-billionaire-mogul-pushed-frances-media-to-the-right/",
-      "note": "Hebdomadaire du groupe Bolloré (et son magazine JDNews), dont la ligne éditoriale est passée « du centre à l'extrême droite » (Index on Censorship, octobre 2025)."
+      "note": "Hebdomadaire du groupe Bolloré (et son magazine JDNews), dont la ligne éditoriale est passée « du centre à l'extrême droite » (Index on Censorship, octobre 2025). Flouté d'après ce qu'il publie (comptes, vidéos, liens vers son site), pas quand quelqu'un le cite.",
+      "matchName": false
     }
   ],
-  "domains": []
+  "domains": [
+    "cnews.fr",
+    "europe1.fr",
+    "lejdd.fr"
+  ]
 }
