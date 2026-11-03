@@ -23,7 +23,7 @@ Don't Feed aide aux trois : le flou évite de cliquer ou de commenter par réfle
 - **Sites bloqués** : un domaine entier peut être remplacé par un écran de blocage, et les liens vers lui sont masqués ailleurs.
 - **Exceptions** : noms à ne jamais bloquer, même s'ils figurent dans une liste d'abonnement.
 - **Tout est local** : aucune donnée envoyée, aucun serveur (le compteur reste sur l'appareil). Le seul trafic réseau est le téléchargement des listes auxquelles tu t'abonnes.
-- **Pas sur tes messageries** : Gmail, Outlook, WhatsApp Web, Messenger, Slack, Discord, etc. sont en pause par défaut (rien d'algorithmique, et tes conversations privées restent intactes). Réactivables dans Réglages.
+- **Pas sur tes messageries** : Gmail, Outlook, WhatsApp Web, Messenger, Slack, Discord, etc. sont en pause par défaut, ainsi que Reddit (on y cite ces noms pour en débattre) (rien d'algorithmique, et tes conversations privées restent intactes). Réactivables dans Réglages.
 
 ## Où ça marche
 

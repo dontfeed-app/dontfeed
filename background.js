@@ -15,6 +15,12 @@ async function init() {
   if (!settings.pausedDefaultsApplied) {
     settings.pausedSites = [...new Set([...(settings.pausedSites || []), ...FRB.DEFAULT_PAUSED])];
     settings.pausedDefaultsApplied = true;
+    settings.pausedRedditApplied = true;
+  }
+  // 0.9.3 : Reddit en pause par défaut, une seule fois (réactivable dans Réglages)
+  if (!settings.pausedRedditApplied) {
+    settings.pausedSites = [...new Set([...(settings.pausedSites || []), 'reddit.com'])];
+    settings.pausedRedditApplied = true;
   }
   await chrome.storage.local.set({
     settings,
